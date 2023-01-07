@@ -37,18 +37,23 @@ namespace C3CodeProject1
                 }
                 if (count == 1)
                 {
-                    MessageBox.Show("Username and Password is correct", "Logged in", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     splashscreen ss = new splashscreen();
                     ss.Show();
                 }
                 else if (count > 1)
                 {
-                    MessageBox.Show("Duplicate username and password");
+                    MessageBox.Show("Duplicate Username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_username.Text = "";
+                    txt_password.Text = "";
+                    this.txt_username.Focus();
                 }
                 else
                 {
-                    MessageBox.Show("Username and password is not correct");
+                    MessageBox.Show("Username and Password is not correct", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_username.Text = "";
+                    txt_password.Text = "";
+                    this.txt_username.Focus();
                 }
             }
             catch (Exception ex)

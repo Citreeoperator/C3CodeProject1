@@ -43,6 +43,7 @@
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
+            this.lbl_username.ForeColor = System.Drawing.SystemColors.Control;
             this.lbl_username.Location = new System.Drawing.Point(406, 150);
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(61, 13);
@@ -71,24 +72,27 @@
             // 
             // txt_username
             // 
+            this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_username.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.Location = new System.Drawing.Point(400, 166);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(315, 35);
+            this.txt_username.Size = new System.Drawing.Size(315, 28);
             this.txt_username.TabIndex = 2;
             // 
             // txt_password
             // 
+            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(400, 230);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '•';
-            this.txt_password.Size = new System.Drawing.Size(315, 35);
+            this.txt_password.Size = new System.Drawing.Size(315, 28);
             this.txt_password.TabIndex = 4;
             // 
             // lbl_password
             // 
             this.lbl_password.AutoSize = true;
+            this.lbl_password.ForeColor = System.Drawing.SystemColors.Control;
             this.lbl_password.Location = new System.Drawing.Point(406, 214);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(59, 13);
@@ -97,6 +101,7 @@
             // 
             // btn_login
             // 
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn_login.Location = new System.Drawing.Point(558, 280);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(157, 66);
@@ -110,7 +115,7 @@
             this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_password);

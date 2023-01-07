@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cctvrequestforms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cctvrequestforms.Designer.cs">
+      <DependentUpon>cctvrequestforms.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboardform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="splashscreen.Designer.cs">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="cctvrequestforms.resx">
+      <DependentUpon>cctvrequestforms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboardform.resx">
       <DependentUpon>dashboardform.cs</DependentUpon>
     </EmbeddedResource>
