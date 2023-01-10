@@ -28,606 +28,814 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label17 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.lbl_case = new System.Windows.Forms.Label();
+            this.info_caseno = new System.Windows.Forms.Label();
+            this.grp_reqinfo = new System.Windows.Forms.GroupBox();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.lbl_contact = new System.Windows.Forms.Label();
+            this.txt_contactno = new System.Windows.Forms.TextBox();
+            this.lbl_address = new System.Windows.Forms.Label();
+            this.txt_address = new System.Windows.Forms.TextBox();
+            this.lbl_officeorg = new System.Windows.Forms.Label();
+            this.txt_officeorg = new System.Windows.Forms.TextBox();
+            this.lbl_fname = new System.Windows.Forms.Label();
+            this.txt_fname = new System.Windows.Forms.TextBox();
+            this.lbl_lname = new System.Windows.Forms.Label();
+            this.txt_lname = new System.Windows.Forms.TextBox();
+            this.grp_detailsofreport = new System.Windows.Forms.GroupBox();
+            this.lbl_camera = new System.Windows.Forms.Label();
+            this.drop_camera = new System.Windows.Forms.ComboBox();
+            this.radio_notcaptured = new System.Windows.Forms.RadioButton();
+            this.radio_captured = new System.Windows.Forms.RadioButton();
+            this.lbl_outcome = new System.Windows.Forms.Label();
+            this.check_screenshot = new System.Windows.Forms.CheckBox();
+            this.check_viewing = new System.Windows.Forms.CheckBox();
+            this.check_video = new System.Windows.Forms.CheckBox();
+            this.lbl_typeofrequest = new System.Windows.Forms.Label();
+            this.lbl_accompanied = new System.Windows.Forms.Label();
+            this.txt_accompanied = new System.Windows.Forms.TextBox();
+            this.lbl_brgy = new System.Windows.Forms.Label();
+            this.drop_brgy = new System.Windows.Forms.ComboBox();
+            this.lbl_location = new System.Windows.Forms.Label();
+            this.txt_location = new System.Windows.Forms.TextBox();
+            this.lbl_typeofincident = new System.Windows.Forms.Label();
+            this.drop_typeofincident = new System.Windows.Forms.ComboBox();
+            this.lbl_time = new System.Windows.Forms.Label();
+            this.txt_timeofincident = new System.Windows.Forms.TextBox();
+            this.picker_dateofincident = new System.Windows.Forms.DateTimePicker();
+            this.lbl_dateofincident = new System.Windows.Forms.Label();
+            this.grp_additional = new System.Windows.Forms.GroupBox();
+            this.txt_additional = new System.Windows.Forms.RichTextBox();
+            this.grp_remarks = new System.Windows.Forms.GroupBox();
+            this.txt_remarks = new System.Windows.Forms.RichTextBox();
+            this.grp_released = new System.Windows.Forms.GroupBox();
+            this.drop_released = new System.Windows.Forms.ComboBox();
+            this.grp_statis = new System.Windows.Forms.GroupBox();
+            this.radio_cancelled = new System.Windows.Forms.RadioButton();
+            this.radio_notreleased = new System.Windows.Forms.RadioButton();
+            this.radio_released = new System.Windows.Forms.RadioButton();
+            this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_reset = new System.Windows.Forms.Button();
+            this.lbl_searchcase = new System.Windows.Forms.Label();
+            this.txt_searchbox = new System.Windows.Forms.TextBox();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.grp_reqinfo.SuspendLayout();
+            this.grp_detailsofreport.SuspendLayout();
+            this.grp_additional.SuspendLayout();
+            this.grp_remarks.SuspendLayout();
+            this.grp_released.SuspendLayout();
+            this.grp_statis.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(151, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Case no:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "####";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(154, 56);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(676, 290);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Requester\'s Information";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(41, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(590, 15);
-            this.textBox1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Last name:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 84);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "First name:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(41, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(590, 15);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Address:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(41, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(590, 15);
-            this.textBox3.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 118);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Office/Organization:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(41, 134);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(590, 15);
-            this.textBox4.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 220);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Email address:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(41, 236);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(590, 15);
-            this.textBox5.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 186);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Contact number:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(41, 202);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(590, 15);
-            this.textBox6.TabIndex = 10;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Location = new System.Drawing.Point(836, 56);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(676, 458);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Details of the Request";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(39, 50);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 13);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Date of the Incident:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(42, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(39, 105);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 13);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Time of the incident:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(42, 121);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(590, 15);
-            this.textBox7.TabIndex = 14;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(42, 155);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(590, 21);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(39, 139);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Type of Incident:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(39, 179);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(217, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Location/Area of the incident took place:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(42, 195);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(590, 15);
-            this.textBox8.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(39, 213);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 13);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Barangay of the incident:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(42, 229);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(590, 21);
-            this.comboBox2.TabIndex = 18;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(39, 293);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 13);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Accompanied by:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Location = new System.Drawing.Point(42, 309);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(590, 15);
-            this.textBox9.TabIndex = 14;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(39, 327);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 13);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Type of request:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(120, 343);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 17);
-            this.checkBox1.TabIndex = 20;
-            this.checkBox1.Text = "Video Footage";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(120, 389);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(68, 17);
-            this.checkBox2.TabIndex = 21;
-            this.checkBox2.Text = "Viewing";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(120, 366);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(118, 17);
-            this.checkBox3.TabIndex = 22;
-            this.checkBox3.Text = "Screenshot/Image";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(39, 420);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 13);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "Outcome of the request:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(183, 420);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(73, 17);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Captured";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(262, 420);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(95, 17);
-            this.radioButton2.TabIndex = 25;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Not Captured";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(39, 253);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(114, 13);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "Primary camera used:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(42, 269);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(590, 21);
-            this.comboBox3.TabIndex = 26;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.richTextBox1);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(154, 352);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(676, 350);
-            this.groupBox3.TabIndex = 14;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Additional Information";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(41, 28);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(590, 296);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.richTextBox2);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(836, 520);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(676, 182);
-            this.groupBox4.TabIndex = 15;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Remarks";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(41, 28);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(590, 128);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.comboBox4);
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox5.Location = new System.Drawing.Point(154, 708);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(676, 72);
-            this.groupBox5.TabIndex = 14;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Footage is review/released by";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(41, 31);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(590, 21);
-            this.comboBox4.TabIndex = 28;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.radioButton5);
-            this.groupBox6.Controls.Add(this.radioButton3);
-            this.groupBox6.Controls.Add(this.radioButton4);
-            this.groupBox6.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox6.Location = new System.Drawing.Point(154, 786);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(676, 72);
-            this.groupBox6.TabIndex = 29;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Status of the Request";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(124, 35);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(93, 17);
-            this.radioButton3.TabIndex = 29;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Not Released";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(47, 35);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(71, 17);
-            this.radioButton4.TabIndex = 28;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Released";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(223, 35);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(75, 17);
-            this.radioButton5.TabIndex = 30;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Cancelled";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(1373, 786);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 72);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(1228, 786);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 72);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(1083, 786);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 72);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(935, 786);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 72);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Reset";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1055, 25);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(89, 13);
-            this.label18.TabIndex = 15;
-            this.label18.Text = "Search case no.:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(1150, 25);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(250, 15);
-            this.textBox10.TabIndex = 14;
-            // 
-            // button5
-            // 
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(1406, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 40);
-            this.button5.TabIndex = 34;
-            this.button5.Text = "Search";
-            this.button5.UseVisualStyleBackColor = true;
+            // lbl_case
+            // 
+            this.lbl_case.AutoSize = true;
+            this.lbl_case.Location = new System.Drawing.Point(151, 25);
+            this.lbl_case.Name = "lbl_case";
+            this.lbl_case.Size = new System.Drawing.Size(51, 13);
+            this.lbl_case.TabIndex = 0;
+            this.lbl_case.Text = "Case no:";
+            // 
+            // info_caseno
+            // 
+            this.info_caseno.AutoSize = true;
+            this.info_caseno.Location = new System.Drawing.Point(208, 25);
+            this.info_caseno.Name = "info_caseno";
+            this.info_caseno.Size = new System.Drawing.Size(35, 13);
+            this.info_caseno.TabIndex = 1;
+            this.info_caseno.Text = "####";
+            // 
+            // grp_reqinfo
+            // 
+            this.grp_reqinfo.Controls.Add(this.lbl_email);
+            this.grp_reqinfo.Controls.Add(this.txt_email);
+            this.grp_reqinfo.Controls.Add(this.lbl_contact);
+            this.grp_reqinfo.Controls.Add(this.txt_contactno);
+            this.grp_reqinfo.Controls.Add(this.lbl_address);
+            this.grp_reqinfo.Controls.Add(this.txt_address);
+            this.grp_reqinfo.Controls.Add(this.lbl_officeorg);
+            this.grp_reqinfo.Controls.Add(this.txt_officeorg);
+            this.grp_reqinfo.Controls.Add(this.lbl_fname);
+            this.grp_reqinfo.Controls.Add(this.txt_fname);
+            this.grp_reqinfo.Controls.Add(this.lbl_lname);
+            this.grp_reqinfo.Controls.Add(this.txt_lname);
+            this.grp_reqinfo.ForeColor = System.Drawing.SystemColors.Control;
+            this.grp_reqinfo.Location = new System.Drawing.Point(154, 56);
+            this.grp_reqinfo.Name = "grp_reqinfo";
+            this.grp_reqinfo.Size = new System.Drawing.Size(676, 290);
+            this.grp_reqinfo.TabIndex = 0;
+            this.grp_reqinfo.TabStop = false;
+            this.grp_reqinfo.Text = "Requester\'s Information";
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(38, 220);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(80, 13);
+            this.lbl_email.TabIndex = 13;
+            this.lbl_email.Text = "Email address:";
+            // 
+            // txt_email
+            // 
+            this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_email.Location = new System.Drawing.Point(41, 236);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(590, 15);
+            this.txt_email.TabIndex = 6;
+            // 
+            // lbl_contact
+            // 
+            this.lbl_contact.AutoSize = true;
+            this.lbl_contact.Location = new System.Drawing.Point(38, 186);
+            this.lbl_contact.Name = "lbl_contact";
+            this.lbl_contact.Size = new System.Drawing.Size(93, 13);
+            this.lbl_contact.TabIndex = 11;
+            this.lbl_contact.Text = "Contact number:";
+            // 
+            // txt_contactno
+            // 
+            this.txt_contactno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_contactno.Location = new System.Drawing.Point(41, 202);
+            this.txt_contactno.Name = "txt_contactno";
+            this.txt_contactno.Size = new System.Drawing.Size(590, 15);
+            this.txt_contactno.TabIndex = 5;
+            // 
+            // lbl_address
+            // 
+            this.lbl_address.AutoSize = true;
+            this.lbl_address.Location = new System.Drawing.Point(38, 152);
+            this.lbl_address.Name = "lbl_address";
+            this.lbl_address.Size = new System.Drawing.Size(51, 13);
+            this.lbl_address.TabIndex = 9;
+            this.lbl_address.Text = "Address:";
+            // 
+            // txt_address
+            // 
+            this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_address.Location = new System.Drawing.Point(41, 168);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(590, 15);
+            this.txt_address.TabIndex = 4;
+            // 
+            // lbl_officeorg
+            // 
+            this.lbl_officeorg.AutoSize = true;
+            this.lbl_officeorg.Location = new System.Drawing.Point(38, 118);
+            this.lbl_officeorg.Name = "lbl_officeorg";
+            this.lbl_officeorg.Size = new System.Drawing.Size(113, 13);
+            this.lbl_officeorg.TabIndex = 7;
+            this.lbl_officeorg.Text = "Office/Organization:";
+            // 
+            // txt_officeorg
+            // 
+            this.txt_officeorg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_officeorg.Location = new System.Drawing.Point(41, 134);
+            this.txt_officeorg.Name = "txt_officeorg";
+            this.txt_officeorg.Size = new System.Drawing.Size(590, 15);
+            this.txt_officeorg.TabIndex = 3;
+            // 
+            // lbl_fname
+            // 
+            this.lbl_fname.AutoSize = true;
+            this.lbl_fname.Location = new System.Drawing.Point(38, 84);
+            this.lbl_fname.Name = "lbl_fname";
+            this.lbl_fname.Size = new System.Drawing.Size(63, 13);
+            this.lbl_fname.TabIndex = 5;
+            this.lbl_fname.Text = "First name:";
+            // 
+            // txt_fname
+            // 
+            this.txt_fname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_fname.Location = new System.Drawing.Point(41, 100);
+            this.txt_fname.Name = "txt_fname";
+            this.txt_fname.Size = new System.Drawing.Size(590, 15);
+            this.txt_fname.TabIndex = 2;
+            // 
+            // lbl_lname
+            // 
+            this.lbl_lname.AutoSize = true;
+            this.lbl_lname.Location = new System.Drawing.Point(38, 50);
+            this.lbl_lname.Name = "lbl_lname";
+            this.lbl_lname.Size = new System.Drawing.Size(61, 13);
+            this.lbl_lname.TabIndex = 3;
+            this.lbl_lname.Text = "Last name:";
+            // 
+            // txt_lname
+            // 
+            this.txt_lname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_lname.Location = new System.Drawing.Point(41, 66);
+            this.txt_lname.Name = "txt_lname";
+            this.txt_lname.Size = new System.Drawing.Size(590, 15);
+            this.txt_lname.TabIndex = 1;
+            // 
+            // grp_detailsofreport
+            // 
+            this.grp_detailsofreport.Controls.Add(this.lbl_camera);
+            this.grp_detailsofreport.Controls.Add(this.drop_camera);
+            this.grp_detailsofreport.Controls.Add(this.radio_notcaptured);
+            this.grp_detailsofreport.Controls.Add(this.radio_captured);
+            this.grp_detailsofreport.Controls.Add(this.lbl_outcome);
+            this.grp_detailsofreport.Controls.Add(this.check_screenshot);
+            this.grp_detailsofreport.Controls.Add(this.check_viewing);
+            this.grp_detailsofreport.Controls.Add(this.check_video);
+            this.grp_detailsofreport.Controls.Add(this.lbl_typeofrequest);
+            this.grp_detailsofreport.Controls.Add(this.lbl_accompanied);
+            this.grp_detailsofreport.Controls.Add(this.txt_accompanied);
+            this.grp_detailsofreport.Controls.Add(this.lbl_brgy);
+            this.grp_detailsofreport.Controls.Add(this.drop_brgy);
+            this.grp_detailsofreport.Controls.Add(this.lbl_location);
+            this.grp_detailsofreport.Controls.Add(this.txt_location);
+            this.grp_detailsofreport.Controls.Add(this.lbl_typeofincident);
+            this.grp_detailsofreport.Controls.Add(this.drop_typeofincident);
+            this.grp_detailsofreport.Controls.Add(this.lbl_time);
+            this.grp_detailsofreport.Controls.Add(this.txt_timeofincident);
+            this.grp_detailsofreport.Controls.Add(this.picker_dateofincident);
+            this.grp_detailsofreport.Controls.Add(this.lbl_dateofincident);
+            this.grp_detailsofreport.ForeColor = System.Drawing.SystemColors.Control;
+            this.grp_detailsofreport.Location = new System.Drawing.Point(836, 56);
+            this.grp_detailsofreport.Name = "grp_detailsofreport";
+            this.grp_detailsofreport.Size = new System.Drawing.Size(676, 458);
+            this.grp_detailsofreport.TabIndex = 7;
+            this.grp_detailsofreport.TabStop = false;
+            this.grp_detailsofreport.Text = "Details of the Request";
+            // 
+            // lbl_camera
+            // 
+            this.lbl_camera.AutoSize = true;
+            this.lbl_camera.Location = new System.Drawing.Point(39, 253);
+            this.lbl_camera.Name = "lbl_camera";
+            this.lbl_camera.Size = new System.Drawing.Size(114, 13);
+            this.lbl_camera.TabIndex = 27;
+            this.lbl_camera.Text = "Primary camera used:";
+            // 
+            // drop_camera
+            // 
+            this.drop_camera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drop_camera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drop_camera.FormattingEnabled = true;
+            this.drop_camera.Items.AddRange(new object[] {
+            "MONITOR 1",
+            "D1\tAurora Corner Angles St. (back of Catholic Center)",
+            "D2\tAurora St. (ACS Annex)",
+            "D3\tAngeles St. (OLACCDI 2)",
+            "D4\tIskong bantay Co. Angeles St. (Dimayuga Alum. Supply)",
+            "D5\tIskong bantay  St.  (Kalabaw)",
+            "D6\tLeon Guinto BLVD 1 (Blvd Parking near Fish Port)",
+            "D7\tLeon Guinto Cor. Gov Castro St. (Gumaca Terminal)",
+            "D8\tLeon Guinto Corner Regino St. (BRGY HALL ZONE 4)",
+            "D9\tLeon Guinto BLVD Corner Rizal St. (Fish Port Crossing)",
+            "D10\tLeon Guinto Corner Zamora St. (Ice Brooker)",
+            "D11\tFishing Port 1 (Pandawan Kaliwa)",
+            "D12\tFishing Port 2 (Pandawan Kanan)",
+            "D13\tPTZ Caltex",
+            "D14\tF Diestro St.F. (Bagumbayan Libro)",
+            "D15\tRicafor Extenstion (Bagumbayan Dulo)",
+            "D16\tGov Castro Corner Bonifacio St. (Likod ng Munisipyo 1)",
+            "D17\tGov Castro Corner Bonifacio St. (Tonyo\'s Chicken)",
+            "D18\t",
+            "D19\t",
+            "D20\tMunicipal Building Annex (Prio/Menro/Peso Blg.)",
+            "D21\tPNB Parking (Loob ng Simbahan)",
+            "========================================",
+            "MONITOR 2",
+            "D1\tANPR Cam Tagbakin (Andoks)",
+            "D2\tOld Municipal Building (old Munisipyo Tagbakin)",
+            "D3\tAh26 Municipal Building (Cias Talyer)",
+            "D4\tPTZ Tagbakin (Tagbakin Triangle)",
+            "D5\tAH26 Tagbakin CSTC (Harap ng CSTC)",
+            "D6\tTagbakin Superlines",
+            "D7\tRizal Corner Soler St. 2 (Veranga\'s Store)",
+            "D8\tRizal Corner Soler St. 1 (Motorlandia)",
+            "D9\tSoler Co. Rizal St. (Soler Sagingan)",
+            "D10\tRizal St. QCRB (Novo/Mariel)",
+            "D11\tRizal St. Motortrade (Oppo/ RR Ihawan)",
+            "D12\tOsmena Co. Rizal St. (Perez Bakery)",
+            "D13\tOsmena Co. Rizal St (Pares ni Peso)",
+            "D14\tOsmena Co. J Andres (Aries Sticker)",
+            "D15\tJ. Andres Co. Osmena St. (Falcon Greenhouse)",
+            "D16\tTAYTAY (paahon ng Taytay)",
+            "D17\tGov Castro Co. Mabini St (Manolet Mansion)",
+            "D18\t",
+            "D19\tAnpr Caltex (Angeles Triangle)",
+            "D20\tAnpr Lavides Bridge (Ilog Maling Tulay)",
+            "========================================",
+            "MONITOR 3",
+            "D1\tRizal corner Quezon St. 1 (Red Ribbon)",
+            "D2\tRizal corner Quezon ST. 2 (A1E/ Landbank)",
+            "D3\tMunicipal Hall Front (New Municipal Blg. Entrance)",
+            "D4\tQuezon  corner Rizal St. (Ink ni Juan)",
+            "D5\tPTZ Municipal ",
+            "D6\tG. Castro Corner Quezon St.1 (Gilid Caparros)",
+            "D7\tR Diaz St Pagasa (Gilid Pag-asa)",
+            "D8\tZamora Corner Quezon St (Manila Dental)",
+            "D9\tQuezon Corner J.Andres St (Western Union)",
+            "D10\tQuezon St .Lavides Bridge (BDO Tulay)",
+            "D11\tLavides Bridge River Side (Jomalig Pantalan)",
+            "D12\tPantalan River Side (Lumang Pantalan)",
+            "D13\tZone 3 Riverside",
+            "D14\tLavides Bridge ",
+            "D15\tEnriquez Co. Zamora St. (Amparo Bakery)",
+            "D16\tPTZ Public Market",
+            "D17\tEnriquez St. Market (Prime Water)",
+            "D18\tWet market (Talipapa)",
+            "D19\tAmado corner Ricafort (Likod ng Balagtas)",
+            "D20\tBulwagang balagtas",
+            "D21\tJuez Andres Co. Iskong Bantay (TMU Office)",
+            "D22\tIskong Bantay Co. J andres (Maries Furniture)",
+            "D23\tIskong Bantay cor. Rizal St. (Kastler Water Refilling)",
+            "D24\tIskong Bantay St. (Decano\'s Talyer)",
+            "D25\tP. Enriquez St. K Annes (Tapsico)",
+            "========================================",
+            "MONITOR 4",
+            "D1\tBaypark 2 ",
+            "D2\tBaypark 1",
+            "D3\tPolice Station Back",
+            "D4\tMdrrmo Entrance",
+            "D5\tLeon Guinto BLVD RHU",
+            "D6\tLeon Guinto Nation Agency",
+            "D7\tRHU front",
+            "D8\tLeon Guint BLVD ALTT",
+            "D9\tLeon Guint BLVD ALTT 2",
+            "D10\tAtimonan LTT ",
+            "D11\tAltt Feeder Port Entrance",
+            "D12\tQuezon Co. Cerrudo St 1",
+            "D13\tQuezon St. Exit (Bahay ni Mayor)",
+            "D14\tQuezon St. Villajuana (Villajuana Subd.)",
+            "D15\tQuezon Co. Cerrudo St 2 (Emil Joana Entrance)",
+            "D16\tCerrudo Co. Quezon St. 3 (Brgy. Hall zone 1)",
+            "========================================",
+            "MONITOR 5",
+            "D1\tCerrudo Co. Iskong Bantay (Vulcanizing Zone 1)",
+            "D2\tCerrudo St. 1 (old Carismatic House)",
+            "D3\tCerrudo St. 2",
+            "D4\tQuezon Ave. Co. Orda St. (Tricycle Terminal)",
+            "D5\tOrda Co. Quezon Avenue (Bethel Condo)",
+            "D6\tQuezon Ave. Co.Aguinaldo St. (Micos Intersection)",
+            "D7\tQuezon Ave. (Kabayan Bank)",
+            "D8\tAguinaldo Co. Quezon Ave (Marivic old Sinehan)",
+            "D9\tAguinaldo St. (Quezelco - I)",
+            "D10\tDe Gracia St 1. (Belsa Bakery)",
+            "D11\tDe Gracia St 2 (Cervantes Alum. Supply)",
+            "D12\tDe Gracia St. 3 ",
+            "D13\tDegracia 4 St. (Nombrefia Bakery)",
+            "D14\tLeon Guinto BLVD (Card Bank Staff House)",
+            "D15\tLeon Guinto BLVD 2 (Blvd Slide)",
+            "D16\tAguinaldo Co. Leon Guinto St (Am- am Store)",
+            "D17\tGov. Castro cor. Mabini St. (Car Wash sa Zone 3)",
+            "D18\tVillamiel St.",
+            "D19\tVillamiel cor. Gov. Castro (Kap. Zoen House)",
+            "========================================",
+            "MONITOR 6",
+            "D1\tSoler St (dating pulpolan)",
+            "D2\tSoler St 2 (Sergio Restaurant)",
+            "D3\tDecembrana St.1 (Juego\'s Water Refilling)",
+            "D4\tDecembrana St. 2 (Imprentahan)",
+            "D5\tMabini St. (LGMC)",
+            "D6\tOsmena St 1 (Dimsum Panda)",
+            "D7\tAguinaldo Cor. Osmena (Aglipay Church)",
+            "D8\tOsmena St. 2 (Volet\'s Eatery)",
+            "D9\tAguinaldo St. (??? Bar)",
+            "D10\tSoler St Co. Orda (Lumbera House)",
+            "D11\tDona Marta Hospital",
+            "D12\tSoler Co. Orda (Doña Marta Trike Terminal)",
+            "D13\tOrda St (Bilyaran)",
+            "D14\tOsmena St 3 (Gate ng Campo Rizal)",
+            "D15\tSoler St 3 (QEC Basketball Court)",
+            "D16\tSoler Extension ANCHS (Site Entranda)",
+            "========================================",
+            "MONITOR 7",
+            "========================================",
+            "MONITOR 8"});
+            this.drop_camera.Location = new System.Drawing.Point(42, 269);
+            this.drop_camera.Name = "drop_camera";
+            this.drop_camera.Size = new System.Drawing.Size(590, 21);
+            this.drop_camera.TabIndex = 12;
+            // 
+            // radio_notcaptured
+            // 
+            this.radio_notcaptured.AutoSize = true;
+            this.radio_notcaptured.Location = new System.Drawing.Point(262, 420);
+            this.radio_notcaptured.Name = "radio_notcaptured";
+            this.radio_notcaptured.Size = new System.Drawing.Size(95, 17);
+            this.radio_notcaptured.TabIndex = 18;
+            this.radio_notcaptured.TabStop = true;
+            this.radio_notcaptured.Text = "Not Captured";
+            this.radio_notcaptured.UseVisualStyleBackColor = true;
+            // 
+            // radio_captured
+            // 
+            this.radio_captured.AutoSize = true;
+            this.radio_captured.Location = new System.Drawing.Point(183, 420);
+            this.radio_captured.Name = "radio_captured";
+            this.radio_captured.Size = new System.Drawing.Size(73, 17);
+            this.radio_captured.TabIndex = 17;
+            this.radio_captured.TabStop = true;
+            this.radio_captured.Text = "Captured";
+            this.radio_captured.UseVisualStyleBackColor = true;
+            // 
+            // lbl_outcome
+            // 
+            this.lbl_outcome.AutoSize = true;
+            this.lbl_outcome.Location = new System.Drawing.Point(39, 420);
+            this.lbl_outcome.Name = "lbl_outcome";
+            this.lbl_outcome.Size = new System.Drawing.Size(133, 13);
+            this.lbl_outcome.TabIndex = 23;
+            this.lbl_outcome.Text = "Outcome of the request:";
+            // 
+            // check_screenshot
+            // 
+            this.check_screenshot.AutoSize = true;
+            this.check_screenshot.Location = new System.Drawing.Point(120, 366);
+            this.check_screenshot.Name = "check_screenshot";
+            this.check_screenshot.Size = new System.Drawing.Size(118, 17);
+            this.check_screenshot.TabIndex = 15;
+            this.check_screenshot.Text = "Screenshot/Image";
+            this.check_screenshot.UseVisualStyleBackColor = true;
+            // 
+            // check_viewing
+            // 
+            this.check_viewing.AutoSize = true;
+            this.check_viewing.Location = new System.Drawing.Point(120, 389);
+            this.check_viewing.Name = "check_viewing";
+            this.check_viewing.Size = new System.Drawing.Size(68, 17);
+            this.check_viewing.TabIndex = 16;
+            this.check_viewing.Text = "Viewing";
+            this.check_viewing.UseVisualStyleBackColor = true;
+            // 
+            // check_video
+            // 
+            this.check_video.AutoSize = true;
+            this.check_video.Location = new System.Drawing.Point(120, 343);
+            this.check_video.Name = "check_video";
+            this.check_video.Size = new System.Drawing.Size(102, 17);
+            this.check_video.TabIndex = 14;
+            this.check_video.Text = "Video Footage";
+            this.check_video.UseVisualStyleBackColor = true;
+            // 
+            // lbl_typeofrequest
+            // 
+            this.lbl_typeofrequest.AutoSize = true;
+            this.lbl_typeofrequest.Location = new System.Drawing.Point(39, 327);
+            this.lbl_typeofrequest.Name = "lbl_typeofrequest";
+            this.lbl_typeofrequest.Size = new System.Drawing.Size(89, 13);
+            this.lbl_typeofrequest.TabIndex = 14;
+            this.lbl_typeofrequest.Text = "Type of request:";
+            // 
+            // lbl_accompanied
+            // 
+            this.lbl_accompanied.AutoSize = true;
+            this.lbl_accompanied.Location = new System.Drawing.Point(39, 293);
+            this.lbl_accompanied.Name = "lbl_accompanied";
+            this.lbl_accompanied.Size = new System.Drawing.Size(94, 13);
+            this.lbl_accompanied.TabIndex = 15;
+            this.lbl_accompanied.Text = "Accompanied by:";
+            // 
+            // txt_accompanied
+            // 
+            this.txt_accompanied.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_accompanied.Location = new System.Drawing.Point(42, 309);
+            this.txt_accompanied.Name = "txt_accompanied";
+            this.txt_accompanied.Size = new System.Drawing.Size(590, 15);
+            this.txt_accompanied.TabIndex = 13;
+            // 
+            // lbl_brgy
+            // 
+            this.lbl_brgy.AutoSize = true;
+            this.lbl_brgy.Location = new System.Drawing.Point(39, 213);
+            this.lbl_brgy.Name = "lbl_brgy";
+            this.lbl_brgy.Size = new System.Drawing.Size(136, 13);
+            this.lbl_brgy.TabIndex = 19;
+            this.lbl_brgy.Text = "Barangay of the incident:";
+            // 
+            // drop_brgy
+            // 
+            this.drop_brgy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drop_brgy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drop_brgy.FormattingEnabled = true;
+            this.drop_brgy.Items.AddRange(new object[] {
+            "ZONE 1 POBLACION",
+            "ZONE 2 POBLACION",
+            "ZONE 3 POBLACION",
+            "ZONE 4 POBLACION",
+            "TAGBAKIN",
+            "===============",
+            "ANGELES",
+            "BALUBAD",
+            "BALUGOHIN",
+            "BUHANGIN",
+            "CARIDAD IBABA",
+            "CARIDAD ILAYA",
+            "HABINGAN",
+            "INACLAGAN",
+            "INALIG",
+            "KILAIT",
+            "KULAWIT",
+            "LAKIP",
+            "LUBI",
+            "LUMUTAN",
+            "MAGSAYSAY",
+            "MALINAO IBABA",
+            "MALINAO ILAYA",
+            "MALUSAK",
+            "MANGGALAYAN BUNDOK",
+            "MANGGALAYAN LABAK",
+            "MATANAG",
+            "MONTES BALAON",
+            "MONTES KALLAGAN",
+            "PONON",
+            "RIZAL",
+            "SAN ANDRES BUNDOK",
+            "SAN ANDRES LABAK",
+            "SAN ISIDRO",
+            "SAN JOSE BALATOK",
+            "SAN RAFAEL",
+            "STA. CATALINA",
+            "SAPAAN",
+            "SOKOL",
+            "TALABA",
+            "TINANDOG",
+            "VILLA IBABA",
+            "VILLA ILAYA"});
+            this.drop_brgy.Location = new System.Drawing.Point(42, 229);
+            this.drop_brgy.Name = "drop_brgy";
+            this.drop_brgy.Size = new System.Drawing.Size(590, 21);
+            this.drop_brgy.TabIndex = 11;
+            // 
+            // lbl_location
+            // 
+            this.lbl_location.AutoSize = true;
+            this.lbl_location.Location = new System.Drawing.Point(39, 179);
+            this.lbl_location.Name = "lbl_location";
+            this.lbl_location.Size = new System.Drawing.Size(217, 13);
+            this.lbl_location.TabIndex = 15;
+            this.lbl_location.Text = "Location/Area of the incident took place:";
+            // 
+            // txt_location
+            // 
+            this.txt_location.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_location.Location = new System.Drawing.Point(42, 195);
+            this.txt_location.Name = "txt_location";
+            this.txt_location.Size = new System.Drawing.Size(590, 15);
+            this.txt_location.TabIndex = 10;
+            // 
+            // lbl_typeofincident
+            // 
+            this.lbl_typeofincident.AutoSize = true;
+            this.lbl_typeofincident.Location = new System.Drawing.Point(39, 139);
+            this.lbl_typeofincident.Name = "lbl_typeofincident";
+            this.lbl_typeofincident.Size = new System.Drawing.Size(92, 13);
+            this.lbl_typeofincident.TabIndex = 17;
+            this.lbl_typeofincident.Text = "Type of Incident:";
+            // 
+            // drop_typeofincident
+            // 
+            this.drop_typeofincident.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drop_typeofincident.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drop_typeofincident.FormattingEnabled = true;
+            this.drop_typeofincident.Items.AddRange(new object[] {
+            "Assault",
+            "Destruction to property",
+            "Fire Disaster",
+            "Hold-up",
+            "Missing Person",
+            "Missing Item",
+            "Murder",
+            "Natural Disaster",
+            "Public Scandal",
+            "Profiling",
+            "Road Crash",
+            "Robbery",
+            "Self-Accident",
+            "Theft",
+            "Trespassing",
+            "Vandalism",
+            "Others - Explain in Additional Information"});
+            this.drop_typeofincident.Location = new System.Drawing.Point(42, 155);
+            this.drop_typeofincident.Name = "drop_typeofincident";
+            this.drop_typeofincident.Size = new System.Drawing.Size(590, 21);
+            this.drop_typeofincident.TabIndex = 9;
+            // 
+            // lbl_time
+            // 
+            this.lbl_time.AutoSize = true;
+            this.lbl_time.Location = new System.Drawing.Point(39, 105);
+            this.lbl_time.Name = "lbl_time";
+            this.lbl_time.Size = new System.Drawing.Size(113, 13);
+            this.lbl_time.TabIndex = 15;
+            this.lbl_time.Text = "Time of the incident:";
+            // 
+            // txt_timeofincident
+            // 
+            this.txt_timeofincident.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_timeofincident.Location = new System.Drawing.Point(42, 121);
+            this.txt_timeofincident.Name = "txt_timeofincident";
+            this.txt_timeofincident.Size = new System.Drawing.Size(590, 15);
+            this.txt_timeofincident.TabIndex = 8;
+            // 
+            // picker_dateofincident
+            // 
+            this.picker_dateofincident.Location = new System.Drawing.Point(42, 69);
+            this.picker_dateofincident.Name = "picker_dateofincident";
+            this.picker_dateofincident.Size = new System.Drawing.Size(200, 22);
+            this.picker_dateofincident.TabIndex = 7;
+            // 
+            // lbl_dateofincident
+            // 
+            this.lbl_dateofincident.AutoSize = true;
+            this.lbl_dateofincident.Location = new System.Drawing.Point(39, 50);
+            this.lbl_dateofincident.Name = "lbl_dateofincident";
+            this.lbl_dateofincident.Size = new System.Drawing.Size(113, 13);
+            this.lbl_dateofincident.TabIndex = 14;
+            this.lbl_dateofincident.Text = "Date of the Incident:";
+            // 
+            // grp_additional
+            // 
+            this.grp_additional.Controls.Add(this.txt_additional);
+            this.grp_additional.ForeColor = System.Drawing.SystemColors.Control;
+            this.grp_additional.Location = new System.Drawing.Point(154, 352);
+            this.grp_additional.Name = "grp_additional";
+            this.grp_additional.Size = new System.Drawing.Size(676, 350);
+            this.grp_additional.TabIndex = 19;
+            this.grp_additional.TabStop = false;
+            this.grp_additional.Text = "Additional Information";
+            // 
+            // txt_additional
+            // 
+            this.txt_additional.Location = new System.Drawing.Point(41, 28);
+            this.txt_additional.Name = "txt_additional";
+            this.txt_additional.Size = new System.Drawing.Size(590, 296);
+            this.txt_additional.TabIndex = 19;
+            this.txt_additional.Text = "";
+            // 
+            // grp_remarks
+            // 
+            this.grp_remarks.Controls.Add(this.txt_remarks);
+            this.grp_remarks.ForeColor = System.Drawing.SystemColors.Control;
+            this.grp_remarks.Location = new System.Drawing.Point(836, 520);
+            this.grp_remarks.Name = "grp_remarks";
+            this.grp_remarks.Size = new System.Drawing.Size(676, 182);
+            this.grp_remarks.TabIndex = 20;
+            this.grp_remarks.TabStop = false;
+            this.grp_remarks.Text = "Remarks";
+            // 
+            // txt_remarks
+            // 
+            this.txt_remarks.Location = new System.Drawing.Point(41, 28);
+            this.txt_remarks.Name = "txt_remarks";
+            this.txt_remarks.Size = new System.Drawing.Size(590, 128);
+            this.txt_remarks.TabIndex = 20;
+            this.txt_remarks.Text = "";
+            // 
+            // grp_released
+            // 
+            this.grp_released.Controls.Add(this.drop_released);
+            this.grp_released.ForeColor = System.Drawing.SystemColors.Control;
+            this.grp_released.Location = new System.Drawing.Point(154, 708);
+            this.grp_released.Name = "grp_released";
+            this.grp_released.Size = new System.Drawing.Size(676, 72);
+            this.grp_released.TabIndex = 21;
+            this.grp_released.TabStop = false;
+            this.grp_released.Text = "Footage is review/released by";
+            // 
+            // drop_released
+            // 
+            this.drop_released.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drop_released.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.drop_released.FormattingEnabled = true;
+            this.drop_released.Items.AddRange(new object[] {
+            "ANDA, BYRON GLENN",
+            "AMPARO, MELQUI ELIOENAI",
+            "DE TORRES, JOHN MICHAEL",
+            "LASHERAS, JOHN PHILLIP",
+            "LASQUETY, MELMA",
+            "ROLDAN, GEOFREY VEIN"});
+            this.drop_released.Location = new System.Drawing.Point(41, 31);
+            this.drop_released.Name = "drop_released";
+            this.drop_released.Size = new System.Drawing.Size(590, 21);
+            this.drop_released.TabIndex = 21;
+            // 
+            // grp_statis
+            // 
+            this.grp_statis.Controls.Add(this.radio_cancelled);
+            this.grp_statis.Controls.Add(this.radio_notreleased);
+            this.grp_statis.Controls.Add(this.radio_released);
+            this.grp_statis.ForeColor = System.Drawing.SystemColors.Control;
+            this.grp_statis.Location = new System.Drawing.Point(154, 786);
+            this.grp_statis.Name = "grp_statis";
+            this.grp_statis.Size = new System.Drawing.Size(676, 72);
+            this.grp_statis.TabIndex = 22;
+            this.grp_statis.TabStop = false;
+            this.grp_statis.Text = "Status of the Request";
+            // 
+            // radio_cancelled
+            // 
+            this.radio_cancelled.AutoSize = true;
+            this.radio_cancelled.Location = new System.Drawing.Point(223, 35);
+            this.radio_cancelled.Name = "radio_cancelled";
+            this.radio_cancelled.Size = new System.Drawing.Size(75, 17);
+            this.radio_cancelled.TabIndex = 24;
+            this.radio_cancelled.TabStop = true;
+            this.radio_cancelled.Text = "Cancelled";
+            this.radio_cancelled.UseVisualStyleBackColor = true;
+            // 
+            // radio_notreleased
+            // 
+            this.radio_notreleased.AutoSize = true;
+            this.radio_notreleased.Location = new System.Drawing.Point(124, 35);
+            this.radio_notreleased.Name = "radio_notreleased";
+            this.radio_notreleased.Size = new System.Drawing.Size(93, 17);
+            this.radio_notreleased.TabIndex = 23;
+            this.radio_notreleased.TabStop = true;
+            this.radio_notreleased.Text = "Not Released";
+            this.radio_notreleased.UseVisualStyleBackColor = true;
+            // 
+            // radio_released
+            // 
+            this.radio_released.AutoSize = true;
+            this.radio_released.Location = new System.Drawing.Point(47, 35);
+            this.radio_released.Name = "radio_released";
+            this.radio_released.Size = new System.Drawing.Size(71, 17);
+            this.radio_released.TabIndex = 22;
+            this.radio_released.TabStop = true;
+            this.radio_released.Text = "Released";
+            this.radio_released.UseVisualStyleBackColor = true;
+            // 
+            // btn_submit
+            // 
+            this.btn_submit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_submit.Location = new System.Drawing.Point(1373, 786);
+            this.btn_submit.Name = "btn_submit";
+            this.btn_submit.Size = new System.Drawing.Size(139, 72);
+            this.btn_submit.TabIndex = 28;
+            this.btn_submit.Text = "Submit";
+            this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_edit.Location = new System.Drawing.Point(1228, 786);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(139, 72);
+            this.btn_edit.TabIndex = 27;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_delete.Location = new System.Drawing.Point(1083, 786);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(139, 72);
+            this.btn_delete.TabIndex = 26;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_reset.Location = new System.Drawing.Point(935, 786);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(139, 72);
+            this.btn_reset.TabIndex = 25;
+            this.btn_reset.Text = "Reset";
+            this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+            // 
+            // lbl_searchcase
+            // 
+            this.lbl_searchcase.AutoSize = true;
+            this.lbl_searchcase.Location = new System.Drawing.Point(1055, 25);
+            this.lbl_searchcase.Name = "lbl_searchcase";
+            this.lbl_searchcase.Size = new System.Drawing.Size(89, 13);
+            this.lbl_searchcase.TabIndex = 15;
+            this.lbl_searchcase.Text = "Search case no.:";
+            // 
+            // txt_searchbox
+            // 
+            this.txt_searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_searchbox.Location = new System.Drawing.Point(1150, 25);
+            this.txt_searchbox.Name = "txt_searchbox";
+            this.txt_searchbox.Size = new System.Drawing.Size(250, 15);
+            this.txt_searchbox.TabIndex = 29;
+            this.txt_searchbox.TextChanged += new System.EventHandler(this.txt_searchbox_TextChanged);
+            // 
+            // btn_search
+            // 
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_search.Location = new System.Drawing.Point(1406, 12);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(106, 40);
+            this.btn_search.TabIndex = 30;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // cctvrequestforms
             // 
@@ -635,36 +843,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(61)))), ((int)(((byte)(121)))));
             this.ClientSize = new System.Drawing.Size(1671, 899);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_search);
+            this.Controls.Add(this.lbl_searchcase);
+            this.Controls.Add(this.txt_searchbox);
+            this.Controls.Add(this.btn_reset);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_edit);
+            this.Controls.Add(this.btn_submit);
+            this.Controls.Add(this.grp_statis);
+            this.Controls.Add(this.grp_released);
+            this.Controls.Add(this.grp_remarks);
+            this.Controls.Add(this.grp_additional);
+            this.Controls.Add(this.grp_detailsofreport);
+            this.Controls.Add(this.grp_reqinfo);
+            this.Controls.Add(this.info_caseno);
+            this.Controls.Add(this.lbl_case);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "cctvrequestforms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cctvrequestforms";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.grp_reqinfo.ResumeLayout(false);
+            this.grp_reqinfo.PerformLayout();
+            this.grp_detailsofreport.ResumeLayout(false);
+            this.grp_detailsofreport.PerformLayout();
+            this.grp_additional.ResumeLayout(false);
+            this.grp_remarks.ResumeLayout(false);
+            this.grp_released.ResumeLayout(false);
+            this.grp_statis.ResumeLayout(false);
+            this.grp_statis.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,59 +880,59 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lbl_case;
+        private System.Windows.Forms.Label info_caseno;
+        private System.Windows.Forms.GroupBox grp_reqinfo;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.Label lbl_contact;
+        private System.Windows.Forms.TextBox txt_contactno;
+        private System.Windows.Forms.Label lbl_address;
+        private System.Windows.Forms.TextBox txt_address;
+        private System.Windows.Forms.Label lbl_officeorg;
+        private System.Windows.Forms.TextBox txt_officeorg;
+        private System.Windows.Forms.Label lbl_fname;
+        private System.Windows.Forms.TextBox txt_fname;
+        private System.Windows.Forms.Label lbl_lname;
+        private System.Windows.Forms.TextBox txt_lname;
+        private System.Windows.Forms.GroupBox grp_detailsofreport;
+        private System.Windows.Forms.RadioButton radio_notcaptured;
+        private System.Windows.Forms.RadioButton radio_captured;
+        private System.Windows.Forms.Label lbl_outcome;
+        private System.Windows.Forms.CheckBox check_screenshot;
+        private System.Windows.Forms.CheckBox check_viewing;
+        private System.Windows.Forms.CheckBox check_video;
+        private System.Windows.Forms.Label lbl_typeofrequest;
+        private System.Windows.Forms.Label lbl_accompanied;
+        private System.Windows.Forms.TextBox txt_accompanied;
+        private System.Windows.Forms.Label lbl_brgy;
+        private System.Windows.Forms.ComboBox drop_brgy;
+        private System.Windows.Forms.Label lbl_location;
+        private System.Windows.Forms.TextBox txt_location;
+        private System.Windows.Forms.Label lbl_typeofincident;
+        private System.Windows.Forms.ComboBox drop_typeofincident;
+        private System.Windows.Forms.Label lbl_time;
+        private System.Windows.Forms.TextBox txt_timeofincident;
+        private System.Windows.Forms.DateTimePicker picker_dateofincident;
+        private System.Windows.Forms.Label lbl_dateofincident;
+        private System.Windows.Forms.Label lbl_camera;
+        private System.Windows.Forms.ComboBox drop_camera;
+        private System.Windows.Forms.GroupBox grp_additional;
+        private System.Windows.Forms.RichTextBox txt_additional;
+        private System.Windows.Forms.GroupBox grp_remarks;
+        private System.Windows.Forms.RichTextBox txt_remarks;
+        private System.Windows.Forms.GroupBox grp_released;
+        private System.Windows.Forms.ComboBox drop_released;
+        private System.Windows.Forms.GroupBox grp_statis;
+        private System.Windows.Forms.RadioButton radio_cancelled;
+        private System.Windows.Forms.RadioButton radio_notreleased;
+        private System.Windows.Forms.RadioButton radio_released;
+        private System.Windows.Forms.Button btn_submit;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_reset;
+        private System.Windows.Forms.Label lbl_searchcase;
+        private System.Windows.Forms.TextBox txt_searchbox;
+        private System.Windows.Forms.Button btn_search;
     }
 }

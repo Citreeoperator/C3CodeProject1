@@ -16,7 +16,7 @@ namespace C3CodeProject1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dashboardform());
+            Application.Run(new loginform());
         }
     }
 }

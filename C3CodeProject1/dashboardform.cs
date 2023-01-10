@@ -41,7 +41,7 @@ namespace C3CodeProject1
 
         private void btn_cctvreports_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_sitrep_Click(object sender, EventArgs e)
