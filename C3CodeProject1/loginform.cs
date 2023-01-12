@@ -18,12 +18,12 @@ namespace C3CodeProject1
         public loginform()
         {
             InitializeComponent();
+            copyrightchanger();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string myConnection = "datasource=localhost;port=3306;username=shiki;password=;database=logininfo";
-            MySqlConnection myConn = new MySqlConnection(myConnection);
+            MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
             MySqlCommand SelectCommand = new MySqlCommand("select * from logininformation where infousername='" + this.txt_username.Text + "' and infopassword='" + this.txt_password.Text + "';", myConn);
             MySqlDataReader myReader;
             try
@@ -60,6 +60,11 @@ namespace C3CodeProject1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void copyrightchanger()
+        {
+            lbl_copyright.Text = "© " + DateTime.Now.Year.ToString() + "- All Rights Reserved.";
         }
     }
 }

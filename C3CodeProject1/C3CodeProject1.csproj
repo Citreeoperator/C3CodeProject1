@@ -53,6 +53,7 @@
     <Compile Include="cctvrequestforms.Designer.cs">
       <DependentUpon>cctvrequestforms.cs</DependentUpon>
     </Compile>
+    <Compile Include="connectionclass.cs" />
     <Compile Include="dashboardform.cs">
       <SubType>Form</SubType>
     </Compile>

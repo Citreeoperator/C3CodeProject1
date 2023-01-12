@@ -16,8 +16,6 @@ namespace C3CodeProject1
 {
     public partial class cctvrequestforms : Form
     {
-        //connect to mysql database
-        string myConnection = "datasource=localhost;port=3306;username=shiki;password=;database=cctvreqdata";
         string typeofrequest;
         string outcomerequest;
         string statusrequest;
@@ -154,8 +152,8 @@ namespace C3CodeProject1
             else 
             {
                 //enter data to database
-                MySqlConnection myConn = new MySqlConnection(myConnection);
-                string strquery = "INSERT INTO cctvreqdata.cctvreq (recordeddate, lname, fname, officeorg, address_r, contactno, emailadd, dateofincident, timeofincident, typeofincident, locationofincident, barangay, camera, accompaniedby, typeofrequest, outcomeofreq, additionalinfo, remarks, releasedby, status) VALUES ('" + DateTime.Now.ToString("MMMM/dd/yyyy") + "', '" + txt_lname.Text + "', '" + txt_fname.Text + "', '" + txt_officeorg.Text + "', '" + txt_address.Text + "', '" + txt_contactno.Text + "', '" + txt_email.Text + "', '" + dt.ToString("MMMM/dd/yyyy") + "', '" + txt_timeofincident.Text + "', '" + drop_typeofincident.Text + "', '" + txt_location.Text + "', '" + drop_brgy.Text + "', '" + drop_camera.Text + "', '" + txt_accompanied.Text + "', '" + typeofrequest + "', '" + outcomerequest + "', '" + txt_additional.Text + "', '" + txt_remarks.Text + "', '" + drop_released.Text + "', '" + statusrequest + "')";
+                MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
+                string strquery = "INSERT INTO db_c3blackops.c3_request_form (recordeddate, lname, fname, officeorg, address_r, contactno, emailadd, dateofincident, timeofincident, typeofincident, locationofincident, barangay, camera, accompaniedby, typeofrequest, outcomeofreq, additionalinfo, remarks, releasedby, status) VALUES ('" + DateTime.Now.ToString("MMMM/dd/yyyy") + "', '" + txt_lname.Text + "', '" + txt_fname.Text + "', '" + txt_officeorg.Text + "', '" + txt_address.Text + "', '" + txt_contactno.Text + "', '" + txt_email.Text + "', '" + dt.ToString("MMMM/dd/yyyy") + "', '" + txt_timeofincident.Text + "', '" + drop_typeofincident.Text + "', '" + txt_location.Text + "', '" + drop_brgy.Text + "', '" + drop_camera.Text + "', '" + txt_accompanied.Text + "', '" + typeofrequest + "', '" + outcomerequest + "', '" + txt_additional.Text + "', '" + txt_remarks.Text + "', '" + drop_released.Text + "', '" + statusrequest + "')";
                 MySqlCommand cmd = new MySqlCommand(strquery, myConn);
                 MySqlDataReader myReader;
                 try
@@ -188,6 +186,7 @@ namespace C3CodeProject1
                     radio_released.Checked = false;
                     radio_notreleased.Checked = false;
                     radio_cancelled.Checked = false;
+                    txt_lname.Focus();
                     
                     myReader.Close();
                     myConn.Close();
@@ -292,12 +291,11 @@ namespace C3CodeProject1
         }
         private void SearchData(string search)
         {
-            MySqlConnection myConn = new MySqlConnection(myConnection);
-
+            MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
             try
             {
                 myConn.Open();
-                String searchsql = "SELECT * FROM cctvreqdata.cctvreq WHERE caseno = '" + search + "'";
+                String searchsql = "SELECT * FROM db_c3blackops.c3_request_form WHERE caseno = '" + search + "'";
                 MySqlCommand cmd = new MySqlCommand(searchsql, myConn);
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 while (myReader.Read())
@@ -326,6 +324,12 @@ namespace C3CodeProject1
                 }
                 myReader.Close();
                 myConn.Close();
+                //if no record found
+                if (txt_lname.Text == "")
+                {
+                    MessageBox.Show("No record found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_lname.Focus();
+                }
             }
             catch (Exception ex)
             {
@@ -349,9 +353,9 @@ namespace C3CodeProject1
         {
             try
             {
-                MySqlConnection myConn = new MySqlConnection(myConnection);
+                MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
                 myConn.Open();
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM cctvreqdata.cctvreq WHERE caseno = '" + txt_searchbox.Text + "'", myConn);
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM db_c3blackops.c3_request_form WHERE caseno = '" + txt_searchbox.Text + "'", myConn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Deleted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
@@ -379,6 +383,8 @@ namespace C3CodeProject1
                 radio_notreleased.Checked = false;
                 radio_cancelled.Checked = false;
                 txt_searchbox.Text = "";
+                info_caseno.Text = "####";
+                txt_lname.Focus();
 
                 myConn.Close();
             }
@@ -394,11 +400,13 @@ namespace C3CodeProject1
             {
                 btn_delete.Enabled = false;
                 btn_edit.Enabled = false;
+                btn_submit.Enabled = true;
             }
             else
             {
                 btn_delete.Enabled = true;
                 btn_edit.Enabled = true;
+                btn_submit.Enabled = false;
             }
         }
 
@@ -411,10 +419,10 @@ namespace C3CodeProject1
 
             try 
             {
-                MySqlConnection myConn = new MySqlConnection(myConnection);
+                MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
                 myConn.Open();
 
-                using (MySqlCommand cmd = new MySqlCommand("UPDATE cctvreqdata.cctvreq SET recodeddate = @recordeddate, lname = @lname, fname = @fname, officeorg = @officeorg, address_r = @address_r, contactno = @contactno, emailadd = @emailadd, dateofincident = @dateofincident, timeofincident = @timeofincident, typeofincident = @typeofincident, locationofincident = @locationofincident, barangay = @barangay, camera = @camera, accompaniedby = @accompaniedby, typeofrequest = @typeofrequest, outcomeofreq = @outcomeofreq, additionalinfo = @additionalinfo, remarks = @remarks, releasedby = @releasedby, status = @status WHERE caseno = @caseno", myConn))
+                using (MySqlCommand cmd = new MySqlCommand("UPDATE db_c3blackops.c3_request_form SET recordeddate = @recordeddate, lname = @lname, fname = @fname, officeorg = @officeorg, address_r = @address_r, contactno = @contactno, emailadd = @emailadd, dateofincident = @dateofincident, timeofincident = @timeofincident, typeofincident = @typeofincident, locationofincident = @locationofincident, barangay = @barangay, camera = @camera, accompaniedby = @accompaniedby, typeofrequest = @typeofrequest, outcomeofreq = @outcomeofreq, additionalinfo = @additionalinfo, remarks = @remarks, releasedby = @releasedby, status = @status WHERE caseno = @caseno", myConn))
                 {
                     cmd.Parameters.AddWithValue("@recordeddate", DateTime.Now.ToString("MMMM/dd/yyyy"));
                     cmd.Parameters.AddWithValue("@lname", txt_lname.Text);
@@ -464,6 +472,9 @@ namespace C3CodeProject1
                     radio_released.Checked = false;
                     radio_notreleased.Checked = false;
                     radio_cancelled.Checked = false;
+                    txt_searchbox.Text = "";
+                    info_caseno.Text = "####";
+                    txt_lname.Focus();
                 }
             }
             catch (Exception ex)
@@ -501,6 +512,9 @@ namespace C3CodeProject1
                 radio_released.Checked = false;
                 radio_notreleased.Checked = false;
                 radio_cancelled.Checked = false;
+                txt_lname.Focus();
+                txt_searchbox.Text = "";
+                info_caseno.Text = "####";
             }
             else if (dialogResult == DialogResult.No)
             {

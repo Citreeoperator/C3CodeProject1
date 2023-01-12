@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace C3CodeProject1
+{
+    internal class connectionclass
+    {
+        //create a public static connection string
+        public static string myConnection = "datasource = 192.168.0.155; port=3306;username=root;password=;database=db_c3blackops";
+    }
+}

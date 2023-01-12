@@ -47,7 +47,7 @@
             // 
             // pnl_top
             // 
-            this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
+            this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
             this.pnl_top.Controls.Add(this.lbl_timeanddate);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
@@ -178,7 +178,7 @@
             // 
             // pnl_bottom
             // 
-            this.pnl_bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
+            this.pnl_bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
             this.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_bottom.Location = new System.Drawing.Point(249, 1007);
             this.pnl_bottom.Name = "pnl_bottom";

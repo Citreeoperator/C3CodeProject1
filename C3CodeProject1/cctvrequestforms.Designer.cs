@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cctvrequestforms));
             this.lbl_case = new System.Windows.Forms.Label();
             this.info_caseno = new System.Windows.Forms.Label();
             this.grp_reqinfo = new System.Windows.Forms.GroupBox();
@@ -66,8 +67,10 @@
             this.picker_dateofincident = new System.Windows.Forms.DateTimePicker();
             this.lbl_dateofincident = new System.Windows.Forms.Label();
             this.grp_additional = new System.Windows.Forms.GroupBox();
+            this.lbl_character10k = new System.Windows.Forms.Label();
             this.txt_additional = new System.Windows.Forms.RichTextBox();
             this.grp_remarks = new System.Windows.Forms.GroupBox();
+            this.lbl_characters5k = new System.Windows.Forms.Label();
             this.txt_remarks = new System.Windows.Forms.RichTextBox();
             this.grp_released = new System.Windows.Forms.GroupBox();
             this.drop_released = new System.Windows.Forms.ComboBox();
@@ -93,7 +96,7 @@
             // lbl_case
             // 
             this.lbl_case.AutoSize = true;
-            this.lbl_case.Location = new System.Drawing.Point(151, 25);
+            this.lbl_case.Location = new System.Drawing.Point(151, 44);
             this.lbl_case.Name = "lbl_case";
             this.lbl_case.Size = new System.Drawing.Size(51, 13);
             this.lbl_case.TabIndex = 0;
@@ -102,7 +105,7 @@
             // info_caseno
             // 
             this.info_caseno.AutoSize = true;
-            this.info_caseno.Location = new System.Drawing.Point(208, 25);
+            this.info_caseno.Location = new System.Drawing.Point(208, 44);
             this.info_caseno.Name = "info_caseno";
             this.info_caseno.Size = new System.Drawing.Size(35, 13);
             this.info_caseno.TabIndex = 1;
@@ -123,7 +126,7 @@
             this.grp_reqinfo.Controls.Add(this.lbl_lname);
             this.grp_reqinfo.Controls.Add(this.txt_lname);
             this.grp_reqinfo.ForeColor = System.Drawing.SystemColors.Control;
-            this.grp_reqinfo.Location = new System.Drawing.Point(154, 56);
+            this.grp_reqinfo.Location = new System.Drawing.Point(154, 75);
             this.grp_reqinfo.Name = "grp_reqinfo";
             this.grp_reqinfo.Size = new System.Drawing.Size(676, 290);
             this.grp_reqinfo.TabIndex = 0;
@@ -256,7 +259,7 @@
             this.grp_detailsofreport.Controls.Add(this.picker_dateofincident);
             this.grp_detailsofreport.Controls.Add(this.lbl_dateofincident);
             this.grp_detailsofreport.ForeColor = System.Drawing.SystemColors.Control;
-            this.grp_detailsofreport.Location = new System.Drawing.Point(836, 56);
+            this.grp_detailsofreport.Location = new System.Drawing.Point(836, 75);
             this.grp_detailsofreport.Name = "grp_detailsofreport";
             this.grp_detailsofreport.Size = new System.Drawing.Size(676, 458);
             this.grp_detailsofreport.TabIndex = 7;
@@ -654,18 +657,29 @@
             // 
             // grp_additional
             // 
+            this.grp_additional.Controls.Add(this.lbl_character10k);
             this.grp_additional.Controls.Add(this.txt_additional);
             this.grp_additional.ForeColor = System.Drawing.SystemColors.Control;
-            this.grp_additional.Location = new System.Drawing.Point(154, 352);
+            this.grp_additional.Location = new System.Drawing.Point(154, 371);
             this.grp_additional.Name = "grp_additional";
             this.grp_additional.Size = new System.Drawing.Size(676, 350);
             this.grp_additional.TabIndex = 19;
             this.grp_additional.TabStop = false;
             this.grp_additional.Text = "Additional Information";
             // 
+            // lbl_character10k
+            // 
+            this.lbl_character10k.AutoSize = true;
+            this.lbl_character10k.Location = new System.Drawing.Point(476, 327);
+            this.lbl_character10k.Name = "lbl_character10k";
+            this.lbl_character10k.Size = new System.Drawing.Size(155, 13);
+            this.lbl_character10k.TabIndex = 20;
+            this.lbl_character10k.Text = "Characters Remaining: 10000";
+            // 
             // txt_additional
             // 
             this.txt_additional.Location = new System.Drawing.Point(41, 28);
+            this.txt_additional.MaxLength = 10000;
             this.txt_additional.Name = "txt_additional";
             this.txt_additional.Size = new System.Drawing.Size(590, 296);
             this.txt_additional.TabIndex = 19;
@@ -673,18 +687,29 @@
             // 
             // grp_remarks
             // 
+            this.grp_remarks.Controls.Add(this.lbl_characters5k);
             this.grp_remarks.Controls.Add(this.txt_remarks);
             this.grp_remarks.ForeColor = System.Drawing.SystemColors.Control;
-            this.grp_remarks.Location = new System.Drawing.Point(836, 520);
+            this.grp_remarks.Location = new System.Drawing.Point(836, 539);
             this.grp_remarks.Name = "grp_remarks";
             this.grp_remarks.Size = new System.Drawing.Size(676, 182);
             this.grp_remarks.TabIndex = 20;
             this.grp_remarks.TabStop = false;
             this.grp_remarks.Text = "Remarks";
             // 
+            // lbl_characters5k
+            // 
+            this.lbl_characters5k.AutoSize = true;
+            this.lbl_characters5k.Location = new System.Drawing.Point(477, 159);
+            this.lbl_characters5k.Name = "lbl_characters5k";
+            this.lbl_characters5k.Size = new System.Drawing.Size(149, 13);
+            this.lbl_characters5k.TabIndex = 21;
+            this.lbl_characters5k.Text = "Characters Remaining: 5000";
+            // 
             // txt_remarks
             // 
             this.txt_remarks.Location = new System.Drawing.Point(41, 28);
+            this.txt_remarks.MaxLength = 5000;
             this.txt_remarks.Name = "txt_remarks";
             this.txt_remarks.Size = new System.Drawing.Size(590, 128);
             this.txt_remarks.TabIndex = 20;
@@ -694,7 +719,7 @@
             // 
             this.grp_released.Controls.Add(this.drop_released);
             this.grp_released.ForeColor = System.Drawing.SystemColors.Control;
-            this.grp_released.Location = new System.Drawing.Point(154, 708);
+            this.grp_released.Location = new System.Drawing.Point(154, 727);
             this.grp_released.Name = "grp_released";
             this.grp_released.Size = new System.Drawing.Size(676, 72);
             this.grp_released.TabIndex = 21;
@@ -724,7 +749,7 @@
             this.grp_statis.Controls.Add(this.radio_notreleased);
             this.grp_statis.Controls.Add(this.radio_released);
             this.grp_statis.ForeColor = System.Drawing.SystemColors.Control;
-            this.grp_statis.Location = new System.Drawing.Point(154, 786);
+            this.grp_statis.Location = new System.Drawing.Point(154, 805);
             this.grp_statis.Name = "grp_statis";
             this.grp_statis.Size = new System.Drawing.Size(676, 72);
             this.grp_statis.TabIndex = 22;
@@ -766,52 +791,72 @@
             // 
             // btn_submit
             // 
-            this.btn_submit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_submit.Location = new System.Drawing.Point(1373, 786);
+            this.btn_submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btn_submit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_submit.Image = ((System.Drawing.Image)(resources.GetObject("btn_submit.Image")));
+            this.btn_submit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_submit.Location = new System.Drawing.Point(1373, 805);
             this.btn_submit.Name = "btn_submit";
+            this.btn_submit.Padding = new System.Windows.Forms.Padding(5, 0, 15, 0);
             this.btn_submit.Size = new System.Drawing.Size(139, 72);
             this.btn_submit.TabIndex = 28;
             this.btn_submit.Text = "Submit";
-            this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_submit.UseVisualStyleBackColor = false;
             this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // btn_edit
             // 
-            this.btn_edit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_edit.Location = new System.Drawing.Point(1228, 786);
+            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btn_edit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
+            this.btn_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_edit.Location = new System.Drawing.Point(1228, 805);
             this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Padding = new System.Windows.Forms.Padding(5, 0, 15, 0);
             this.btn_edit.Size = new System.Drawing.Size(139, 72);
             this.btn_edit.TabIndex = 27;
             this.btn_edit.Text = "Edit";
-            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_edit.UseVisualStyleBackColor = false;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_delete
             // 
-            this.btn_delete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_delete.Location = new System.Drawing.Point(1083, 786);
+            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btn_delete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_delete.Location = new System.Drawing.Point(1083, 805);
             this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Padding = new System.Windows.Forms.Padding(5, 0, 15, 0);
             this.btn_delete.Size = new System.Drawing.Size(139, 72);
             this.btn_delete.TabIndex = 26;
             this.btn_delete.Text = "Delete";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_delete.UseVisualStyleBackColor = false;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_reset
             // 
-            this.btn_reset.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_reset.Location = new System.Drawing.Point(935, 786);
+            this.btn_reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btn_reset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
+            this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reset.Location = new System.Drawing.Point(935, 805);
             this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Padding = new System.Windows.Forms.Padding(5, 0, 15, 0);
             this.btn_reset.Size = new System.Drawing.Size(139, 72);
             this.btn_reset.TabIndex = 25;
             this.btn_reset.Text = "Reset";
-            this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_reset.UseVisualStyleBackColor = false;
             this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // lbl_searchcase
             // 
             this.lbl_searchcase.AutoSize = true;
-            this.lbl_searchcase.Location = new System.Drawing.Point(1055, 25);
+            this.lbl_searchcase.Location = new System.Drawing.Point(1022, 36);
             this.lbl_searchcase.Name = "lbl_searchcase";
             this.lbl_searchcase.Size = new System.Drawing.Size(89, 13);
             this.lbl_searchcase.TabIndex = 15;
@@ -820,7 +865,7 @@
             // txt_searchbox
             // 
             this.txt_searchbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_searchbox.Location = new System.Drawing.Point(1150, 25);
+            this.txt_searchbox.Location = new System.Drawing.Point(1117, 36);
             this.txt_searchbox.Name = "txt_searchbox";
             this.txt_searchbox.Size = new System.Drawing.Size(250, 15);
             this.txt_searchbox.TabIndex = 29;
@@ -828,13 +873,18 @@
             // 
             // btn_search
             // 
-            this.btn_search.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_search.Location = new System.Drawing.Point(1406, 12);
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_search.Image = ((System.Drawing.Image)(resources.GetObject("btn_search.Image")));
+            this.btn_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_search.Location = new System.Drawing.Point(1373, 6);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(106, 40);
+            this.btn_search.Padding = new System.Windows.Forms.Padding(5, 0, 15, 0);
+            this.btn_search.Size = new System.Drawing.Size(139, 72);
             this.btn_search.TabIndex = 30;
             this.btn_search.Text = "Search";
-            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_search.UseVisualStyleBackColor = false;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // cctvrequestforms
@@ -869,7 +919,9 @@
             this.grp_detailsofreport.ResumeLayout(false);
             this.grp_detailsofreport.PerformLayout();
             this.grp_additional.ResumeLayout(false);
+            this.grp_additional.PerformLayout();
             this.grp_remarks.ResumeLayout(false);
+            this.grp_remarks.PerformLayout();
             this.grp_released.ResumeLayout(false);
             this.grp_statis.ResumeLayout(false);
             this.grp_statis.PerformLayout();
@@ -934,5 +986,7 @@
         private System.Windows.Forms.Label lbl_searchcase;
         private System.Windows.Forms.TextBox txt_searchbox;
         private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.Label lbl_character10k;
+        private System.Windows.Forms.Label lbl_characters5k;
     }
 }
