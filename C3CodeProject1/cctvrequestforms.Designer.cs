@@ -678,12 +678,14 @@
             // 
             // txt_additional
             // 
+            this.txt_additional.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_additional.Location = new System.Drawing.Point(41, 28);
             this.txt_additional.MaxLength = 10000;
             this.txt_additional.Name = "txt_additional";
             this.txt_additional.Size = new System.Drawing.Size(590, 296);
             this.txt_additional.TabIndex = 19;
             this.txt_additional.Text = "";
+            this.txt_additional.TextChanged += new System.EventHandler(this.txt_additional_TextChanged);
             // 
             // grp_remarks
             // 
@@ -708,12 +710,14 @@
             // 
             // txt_remarks
             // 
+            this.txt_remarks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_remarks.Location = new System.Drawing.Point(41, 28);
             this.txt_remarks.MaxLength = 5000;
             this.txt_remarks.Name = "txt_remarks";
             this.txt_remarks.Size = new System.Drawing.Size(590, 128);
             this.txt_remarks.TabIndex = 20;
             this.txt_remarks.Text = "";
+            this.txt_remarks.TextChanged += new System.EventHandler(this.txt_remarks_TextChanged);
             // 
             // grp_released
             // 
@@ -840,7 +844,7 @@
             // btn_reset
             // 
             this.btn_reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btn_reset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_reset.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
             this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_reset.Location = new System.Drawing.Point(935, 805);
@@ -874,7 +878,7 @@
             // btn_search
             // 
             this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btn_search.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_search.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_search.Image = ((System.Drawing.Image)(resources.GetObject("btn_search.Image")));
             this.btn_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_search.Location = new System.Drawing.Point(1373, 6);

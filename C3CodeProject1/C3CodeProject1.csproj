@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cctvreportform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cctvreportform.Designer.cs">
+      <DependentUpon>cctvreportform.cs</DependentUpon>
+    </Compile>
     <Compile Include="cctvrequestforms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="splashscreen.Designer.cs">
       <DependentUpon>splashscreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="cctvreportform.resx">
+      <DependentUpon>cctvreportform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cctvrequestforms.resx">
       <DependentUpon>cctvrequestforms.cs</DependentUpon>
     </EmbeddedResource>

@@ -14,7 +14,8 @@ namespace C3CodeProject1
     {
         //Panels
         cctvrequestforms cctvReqForms = new cctvrequestforms();
-        
+        cctvreportform cctvRepForms = new cctvreportform();
+
         public dashboardform()
         {
             InitializeComponent();
@@ -23,12 +24,13 @@ namespace C3CodeProject1
 
         private void tmr_dash_Tick(object sender, EventArgs e)
         {
-            lbl_timeanddate.Text = DateTime.Now.ToString("MMMM dd, yyyy HH:mm:ss ");
+            lbl_timeanddate.Text = DateTime.Now.ToString("MMMM dd, yyyy \nHH:mm:ss ");
         }
 
         private void btn_home_Click(object sender, EventArgs e)
         {
             cctvReqForms.Hide();
+            cctvRepForms.Hide();
         }
 
         private void btn_cctvreqforms_Click(object sender, EventArgs e)
@@ -41,7 +43,10 @@ namespace C3CodeProject1
 
         private void btn_cctvreports_Click(object sender, EventArgs e)
         {
-            
+            cctvRepForms.TopLevel = false;
+            pnl_mainpanel.Controls.Add(cctvRepForms);
+            cctvRepForms.BringToFront();
+            cctvRepForms.Show();
         }
 
         private void btn_sitrep_Click(object sender, EventArgs e)

@@ -25,6 +25,9 @@ namespace C3CodeProject1
             InitializeComponent();
             btn_delete.Enabled = false;
             btn_edit.Enabled = false;
+            txt_additional.TextChanged += new EventHandler(txt_additional_TextChanged);
+            txt_remarks.TextChanged += new EventHandler(txt_remarks_TextChanged);
+            uppercasesystem();
         }
 
         public void dateformat() 
@@ -174,6 +177,7 @@ namespace C3CodeProject1
                     txt_accompanied.Clear();
                     txt_additional.Clear();
                     txt_remarks.Clear();
+                    picker_dateofincident.Value = DateTime.Now;
                     drop_typeofincident.SelectedIndex = -1;
                     drop_brgy.SelectedIndex = -1;
                     drop_camera.SelectedIndex = -1;
@@ -370,6 +374,7 @@ namespace C3CodeProject1
                 txt_accompanied.Clear();
                 txt_additional.Clear();
                 txt_remarks.Clear();
+                picker_dateofincident.Value = DateTime.Now;
                 drop_typeofincident.SelectedIndex = -1;
                 drop_brgy.SelectedIndex = -1;
                 drop_camera.SelectedIndex = -1;
@@ -408,6 +413,32 @@ namespace C3CodeProject1
                 btn_edit.Enabled = true;
                 btn_submit.Enabled = false;
             }
+            //reset all fields
+            txt_lname.Clear();
+            txt_fname.Clear();
+            txt_officeorg.Clear();
+            txt_address.Clear();
+            txt_contactno.Clear();
+            txt_email.Clear();
+            txt_timeofincident.Clear();
+            txt_location.Clear();
+            txt_accompanied.Clear();
+            txt_additional.Clear();
+            txt_remarks.Clear();
+            picker_dateofincident.Value = DateTime.Now;
+            drop_typeofincident.SelectedIndex = -1;
+            drop_brgy.SelectedIndex = -1;
+            drop_camera.SelectedIndex = -1;
+            drop_released.SelectedIndex = -1;
+            check_video.Checked = false;
+            check_screenshot.Checked = false;
+            check_viewing.Checked = false;
+            radio_captured.Checked = false;
+            radio_notcaptured.Checked = false;
+            radio_released.Checked = false;
+            radio_notreleased.Checked = false;
+            radio_cancelled.Checked = false;
+            info_caseno.Text = "####";
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
@@ -424,7 +455,7 @@ namespace C3CodeProject1
 
                 using (MySqlCommand cmd = new MySqlCommand("UPDATE db_c3blackops.c3_request_form SET recordeddate = @recordeddate, lname = @lname, fname = @fname, officeorg = @officeorg, address_r = @address_r, contactno = @contactno, emailadd = @emailadd, dateofincident = @dateofincident, timeofincident = @timeofincident, typeofincident = @typeofincident, locationofincident = @locationofincident, barangay = @barangay, camera = @camera, accompaniedby = @accompaniedby, typeofrequest = @typeofrequest, outcomeofreq = @outcomeofreq, additionalinfo = @additionalinfo, remarks = @remarks, releasedby = @releasedby, status = @status WHERE caseno = @caseno", myConn))
                 {
-                    cmd.Parameters.AddWithValue("@recordeddate", DateTime.Now.ToString("MMMM/dd/yyyy"));
+                    cmd.Parameters.AddWithValue("@recordeddate", "Updated - " + DateTime.Now.ToString("MMMM/dd/yyyy"));
                     cmd.Parameters.AddWithValue("@lname", txt_lname.Text);
                     cmd.Parameters.AddWithValue("@fname", txt_fname.Text);
                     cmd.Parameters.AddWithValue("@officeorg", txt_officeorg.Text);
@@ -460,6 +491,7 @@ namespace C3CodeProject1
                     txt_accompanied.Clear();
                     txt_additional.Clear();
                     txt_remarks.Clear();
+                    picker_dateofincident.Value = DateTime.Now;
                     drop_typeofincident.SelectedIndex = -1;
                     drop_brgy.SelectedIndex = -1;
                     drop_camera.SelectedIndex = -1;
@@ -500,6 +532,7 @@ namespace C3CodeProject1
                 txt_accompanied.Clear();
                 txt_additional.Clear();
                 txt_remarks.Clear();
+                picker_dateofincident.Value = DateTime.Now;
                 drop_typeofincident.SelectedIndex = -1;
                 drop_brgy.SelectedIndex = -1;
                 drop_camera.SelectedIndex = -1;
@@ -520,6 +553,30 @@ namespace C3CodeProject1
             {
                 //do nothing
             }
+        }
+
+        private void txt_additional_TextChanged(object sender, EventArgs e)
+        {
+            lbl_character10k.Text = "Characters Remaining: " + (10000 - txt_additional.Text.Length).ToString();
+        }
+
+        private void txt_remarks_TextChanged(object sender, EventArgs e)
+        {
+            lbl_characters5k.Text = "Characters Remaining: " + (5000 - txt_remarks.Text.Length).ToString();
+        }
+
+        private void uppercasesystem()
+        {
+            //make all textboxes in uppercase
+            txt_lname.CharacterCasing = CharacterCasing.Upper;
+            txt_fname.CharacterCasing = CharacterCasing.Upper;
+            txt_officeorg.CharacterCasing = CharacterCasing.Upper;
+            txt_address.CharacterCasing = CharacterCasing.Upper;
+            txt_contactno.CharacterCasing = CharacterCasing.Upper;
+            txt_email.CharacterCasing = CharacterCasing.Upper;
+            txt_timeofincident.CharacterCasing = CharacterCasing.Upper;
+            txt_location.CharacterCasing = CharacterCasing.Upper;
+            txt_accompanied.CharacterCasing = CharacterCasing.Upper;
         }
     }
 }
