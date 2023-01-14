@@ -15,10 +15,12 @@ namespace C3CodeProject1
         //Panels
         cctvrequestforms cctvReqForms = new cctvrequestforms();
         cctvreportform cctvRepForms = new cctvreportform();
+        montlysummaryform monthlyrep = new montlysummaryform();
 
         public dashboardform()
         {
             InitializeComponent();
+            versionno();
             tmr_dash.Start();
         }
 
@@ -31,6 +33,10 @@ namespace C3CodeProject1
         {
             cctvReqForms.Hide();
             cctvRepForms.Hide();
+            monthlyrep.TopLevel = false;
+            pnl_mainpanel.Controls.Add(monthlyrep);
+            monthlyrep.BringToFront();
+            monthlyrep.Show();
         }
 
         private void btn_cctvreqforms_Click(object sender, EventArgs e)
@@ -62,6 +68,12 @@ namespace C3CodeProject1
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void versionno()
+        {
+            //show the version number according the properties
+            lbl_version.Text = "Version " + Application.ProductVersion;
         }
     }
 }

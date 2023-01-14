@@ -31,8 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboardform));
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_timeanddate = new System.Windows.Forms.Label();
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_endorsement = new System.Windows.Forms.Button();
             this.btn_sitrep = new System.Windows.Forms.Button();
@@ -41,21 +43,37 @@
             this.btn_home = new System.Windows.Forms.Button();
             this.tmr_dash = new System.Windows.Forms.Timer(this.components);
             this.pnl_bottom = new System.Windows.Forms.Panel();
+            this.lbl_version = new System.Windows.Forms.Label();
             this.pnl_mainpanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
             this.pnl_menu.SuspendLayout();
+            this.pnl_bottom.SuspendLayout();
+            this.pnl_mainpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
+            this.pnl_top.Controls.Add(this.label1);
             this.pnl_top.Controls.Add(this.lbl_timeanddate);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(1920, 108);
             this.pnl_top.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(393, 86);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Project TBD";
             // 
             // lbl_timeanddate
             // 
@@ -85,6 +103,24 @@
             this.pnl_menu.Name = "pnl_menu";
             this.pnl_menu.Size = new System.Drawing.Size(249, 932);
             this.pnl_menu.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 559);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.button1.Size = new System.Drawing.Size(249, 108);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "About";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btn_exit
             // 
@@ -204,37 +240,40 @@
             // pnl_bottom
             // 
             this.pnl_bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(0)))));
+            this.pnl_bottom.Controls.Add(this.lbl_version);
             this.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_bottom.Location = new System.Drawing.Point(249, 1006);
             this.pnl_bottom.Name = "pnl_bottom";
             this.pnl_bottom.Size = new System.Drawing.Size(1671, 34);
             this.pnl_bottom.TabIndex = 2;
             // 
+            // lbl_version
+            // 
+            this.lbl_version.Location = new System.Drawing.Point(1514, 4);
+            this.lbl_version.Name = "lbl_version";
+            this.lbl_version.Size = new System.Drawing.Size(157, 30);
+            this.lbl_version.TabIndex = 0;
+            this.lbl_version.Text = "Version No.";
+            this.lbl_version.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // pnl_mainpanel
             // 
-            this.pnl_mainpanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnl_mainpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(61)))), ((int)(((byte)(121)))));
+            this.pnl_mainpanel.Controls.Add(this.pictureBox1);
             this.pnl_mainpanel.Location = new System.Drawing.Point(249, 108);
             this.pnl_mainpanel.Name = "pnl_mainpanel";
             this.pnl_mainpanel.Size = new System.Drawing.Size(1671, 899);
             this.pnl_mainpanel.TabIndex = 3;
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 559);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.button1.Size = new System.Drawing.Size(249, 108);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "About";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(634, 899);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // dashboardform
             // 
@@ -256,6 +295,9 @@
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             this.pnl_menu.ResumeLayout(false);
+            this.pnl_bottom.ResumeLayout(false);
+            this.pnl_mainpanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +317,8 @@
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Panel pnl_mainpanel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl_version;
+        private System.Windows.Forms.Label label1;
     }
 }

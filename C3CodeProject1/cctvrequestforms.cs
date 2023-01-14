@@ -33,7 +33,7 @@ namespace C3CodeProject1
         public void dateformat() 
         {
             picker_dateofincident.Format = DateTimePickerFormat.Custom;
-            picker_dateofincident.CustomFormat = "MMMM/dd/yyyy";
+            picker_dateofincident.CustomFormat = "MMMM dd yyyy";
         }
 
         public void typeofrequestcondition()
@@ -156,7 +156,7 @@ namespace C3CodeProject1
             {
                 //enter data to database
                 MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
-                string strquery = "INSERT INTO db_c3blackops.c3_request_form (recordeddate, lname, fname, officeorg, address_r, contactno, emailadd, dateofincident, timeofincident, typeofincident, locationofincident, barangay, camera, accompaniedby, typeofrequest, outcomeofreq, additionalinfo, remarks, releasedby, status) VALUES ('" + DateTime.Now.ToString("MMMM/dd/yyyy") + "', '" + txt_lname.Text + "', '" + txt_fname.Text + "', '" + txt_officeorg.Text + "', '" + txt_address.Text + "', '" + txt_contactno.Text + "', '" + txt_email.Text + "', '" + dt.ToString("MMMM/dd/yyyy") + "', '" + txt_timeofincident.Text + "', '" + drop_typeofincident.Text + "', '" + txt_location.Text + "', '" + drop_brgy.Text + "', '" + drop_camera.Text + "', '" + txt_accompanied.Text + "', '" + typeofrequest + "', '" + outcomerequest + "', '" + txt_additional.Text + "', '" + txt_remarks.Text + "', '" + drop_released.Text + "', '" + statusrequest + "')";
+                string strquery = "INSERT INTO db_c3blackops.c3_request_form (recordeddate, lname, fname, officeorg, address_r, contactno, emailadd, dateofincident, timeofincident, typeofincident, locationofincident, barangay, camera, accompaniedby, typeofrequest, outcomeofreq, additionalinfo, remarks, releasedby, status) VALUES ('" + DateTime.Now.ToString("MMMM dd yyyy") + "', '" + txt_lname.Text + "', '" + txt_fname.Text + "', '" + txt_officeorg.Text + "', '" + txt_address.Text + "', '" + txt_contactno.Text + "', '" + txt_email.Text + "', '" + dt.ToString("MMMM dd yyyy") + "', '" + txt_timeofincident.Text + "', '" + drop_typeofincident.Text + "', '" + txt_location.Text + "', '" + drop_brgy.Text + "', '" + drop_camera.Text + "', '" + txt_accompanied.Text + "', '" + typeofrequest + "', '" + outcomerequest + "', '" + txt_additional.Text + "', '" + txt_remarks.Text + "', '" + drop_released.Text + "', '" + statusrequest + "')";
                 MySqlCommand cmd = new MySqlCommand(strquery, myConn);
                 MySqlDataReader myReader;
                 try
@@ -455,14 +455,14 @@ namespace C3CodeProject1
 
                 using (MySqlCommand cmd = new MySqlCommand("UPDATE db_c3blackops.c3_request_form SET recordeddate = @recordeddate, lname = @lname, fname = @fname, officeorg = @officeorg, address_r = @address_r, contactno = @contactno, emailadd = @emailadd, dateofincident = @dateofincident, timeofincident = @timeofincident, typeofincident = @typeofincident, locationofincident = @locationofincident, barangay = @barangay, camera = @camera, accompaniedby = @accompaniedby, typeofrequest = @typeofrequest, outcomeofreq = @outcomeofreq, additionalinfo = @additionalinfo, remarks = @remarks, releasedby = @releasedby, status = @status WHERE caseno = @caseno", myConn))
                 {
-                    cmd.Parameters.AddWithValue("@recordeddate", "Updated - " + DateTime.Now.ToString("MMMM/dd/yyyy"));
+                    cmd.Parameters.AddWithValue("@recordeddate", DateTime.Now.ToString("MMMM dd yyyy"));
                     cmd.Parameters.AddWithValue("@lname", txt_lname.Text);
                     cmd.Parameters.AddWithValue("@fname", txt_fname.Text);
                     cmd.Parameters.AddWithValue("@officeorg", txt_officeorg.Text);
                     cmd.Parameters.AddWithValue("@address_r", txt_address.Text);
                     cmd.Parameters.AddWithValue("@contactno", txt_contactno.Text);
                     cmd.Parameters.AddWithValue("@emailadd", txt_email.Text);
-                    cmd.Parameters.AddWithValue("@dateofincident", dt.ToString("MMMM/dd/yyyy"));
+                    cmd.Parameters.AddWithValue("@dateofincident", dt.ToString("MMMM dd yyyy"));
                     cmd.Parameters.AddWithValue("@timeofincident", txt_timeofincident.Text);
                     cmd.Parameters.AddWithValue("@typeofincident", drop_typeofincident.Text);
                     cmd.Parameters.AddWithValue("@locationofincident", txt_location.Text);
