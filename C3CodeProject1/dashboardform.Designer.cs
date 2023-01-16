@@ -162,7 +162,6 @@
             // 
             // btn_sitrep
             // 
-            this.btn_sitrep.Enabled = false;
             this.btn_sitrep.FlatAppearance.BorderSize = 0;
             this.btn_sitrep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sitrep.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

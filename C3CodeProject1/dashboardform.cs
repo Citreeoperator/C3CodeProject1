@@ -16,6 +16,7 @@ namespace C3CodeProject1
         cctvrequestforms cctvReqForms = new cctvrequestforms();
         cctvreportform cctvRepForms = new cctvreportform();
         montlysummaryform monthlyrep = new montlysummaryform();
+        sitrepform sitrep = new sitrepform();
 
         public dashboardform()
         {
@@ -33,6 +34,7 @@ namespace C3CodeProject1
         {
             cctvReqForms.Hide();
             cctvRepForms.Hide();
+            sitrep.Hide();
             monthlyrep.TopLevel = false;
             pnl_mainpanel.Controls.Add(monthlyrep);
             monthlyrep.BringToFront();
@@ -57,7 +59,10 @@ namespace C3CodeProject1
 
         private void btn_sitrep_Click(object sender, EventArgs e)
         {
-
+            sitrep.TopLevel = false;
+            pnl_mainpanel.Controls.Add(sitrep);
+            sitrep.BringToFront();
+            sitrep.Show();
         }
 
         private void btn_endorsement_Click(object sender, EventArgs e)
