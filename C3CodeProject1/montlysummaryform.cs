@@ -47,7 +47,7 @@ namespace C3CodeProject1
         private void totalmonth()
         {
             MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS TOTALMONTH FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%'", myConn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS TOTALMONTH FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" +DateTime.Now.ToString("MMMM")+ "%' AND recordeddate LIKE '%" +DateTime.Now.ToString("yyyy")+ "%' ", myConn);
             myConn.Open();
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -56,11 +56,11 @@ namespace C3CodeProject1
             }
             myConn.Close();
         }
-
+        
         private void totalreleased()
         {
             MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS TOTALRELEASED FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' AND status = 'Released'", myConn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS TOTALRELEASED FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' AND recordeddate LIKE '%" + DateTime.Now.ToString("yyyy") + "%' AND status = 'Released'", myConn);
             myConn.Open();
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -73,7 +73,7 @@ namespace C3CodeProject1
         private void freqcamera()
         {   
             MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS COUNTCAM, camera AS FREQCAMERA FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' GROUP BY camera ORDER BY COUNT(camera) ASC", myConn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS COUNTCAM, camera AS FREQCAMERA FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' AND recordeddate LIKE '%" + DateTime.Now.ToString("yyyy") + "%' GROUP BY camera ORDER BY COUNT(camera) ASC", myConn);
             myConn.Open();
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -87,12 +87,12 @@ namespace C3CodeProject1
         private void barangay()
         {
             MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS COUNTBRGY, barangay AS FREQBRGY FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' GROUP BY barangay ORDER BY COUNT(barangay) ASC", myConn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS COUNTBRGY, barangay AS FREQBRGY FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' AND recordeddate LIKE '%" + DateTime.Now.ToString("yyyy") + "%' GROUP BY barangay ORDER BY COUNT(barangay) ASC", myConn);
             myConn.Open();
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                show_barangay.Text = reader["FREQBRGY"].ToString() + "\n " + reader["COUNTBRGY"].ToString();
+                show_barangay.Text = reader["COUNTBRGY"].ToString() + "\n " + reader["FREQBRGY"].ToString();
 
             }
             myConn.Close();
@@ -101,12 +101,12 @@ namespace C3CodeProject1
         private void commonincident()
         {
             MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS COUNTINC, typeofincident AS FREQINC FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' GROUP BY typeofincident ORDER BY COUNT(typeofincident) ASC", myConn);
+            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(caseno) AS COUNTINC, typeofincident AS FREQINC FROM db_c3blackops.c3_request_form WHERE recordeddate LIKE '%" + DateTime.Now.ToString("MMMM") + "%' AND recordeddate LIKE '%" + DateTime.Now.ToString("yyyy") + "%' GROUP BY typeofincident ORDER BY COUNT(typeofincident) ASC", myConn);
             myConn.Open();
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                show_common.Text = reader["FREQINC"].ToString() + "\n " + reader["COUNTINC"].ToString();
+                show_common.Text = reader["COUNTINC"].ToString() + "\n " + reader["FREQINC"].ToString();
 
             }
             myConn.Close();

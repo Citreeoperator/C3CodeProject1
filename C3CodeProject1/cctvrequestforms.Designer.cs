@@ -32,6 +32,8 @@
             this.lbl_case = new System.Windows.Forms.Label();
             this.info_caseno = new System.Windows.Forms.Label();
             this.grp_reqinfo = new System.Windows.Forms.GroupBox();
+            this.picker_recorded = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.lbl_contact = new System.Windows.Forms.Label();
@@ -113,6 +115,8 @@
             // 
             // grp_reqinfo
             // 
+            this.grp_reqinfo.Controls.Add(this.picker_recorded);
+            this.grp_reqinfo.Controls.Add(this.label1);
             this.grp_reqinfo.Controls.Add(this.lbl_email);
             this.grp_reqinfo.Controls.Add(this.txt_email);
             this.grp_reqinfo.Controls.Add(this.lbl_contact);
@@ -133,10 +137,26 @@
             this.grp_reqinfo.TabStop = false;
             this.grp_reqinfo.Text = "Requester\'s Information";
             // 
+            // picker_recorded
+            // 
+            this.picker_recorded.Location = new System.Drawing.Point(31, 37);
+            this.picker_recorded.Name = "picker_recorded";
+            this.picker_recorded.Size = new System.Drawing.Size(200, 22);
+            this.picker_recorded.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Date Recorded:";
+            // 
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
-            this.lbl_email.Location = new System.Drawing.Point(38, 220);
+            this.lbl_email.Location = new System.Drawing.Point(28, 239);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(80, 13);
             this.lbl_email.TabIndex = 13;
@@ -145,7 +165,7 @@
             // txt_email
             // 
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_email.Location = new System.Drawing.Point(41, 236);
+            this.txt_email.Location = new System.Drawing.Point(31, 255);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(590, 15);
             this.txt_email.TabIndex = 6;
@@ -153,7 +173,7 @@
             // lbl_contact
             // 
             this.lbl_contact.AutoSize = true;
-            this.lbl_contact.Location = new System.Drawing.Point(38, 186);
+            this.lbl_contact.Location = new System.Drawing.Point(28, 205);
             this.lbl_contact.Name = "lbl_contact";
             this.lbl_contact.Size = new System.Drawing.Size(93, 13);
             this.lbl_contact.TabIndex = 11;
@@ -162,7 +182,7 @@
             // txt_contactno
             // 
             this.txt_contactno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_contactno.Location = new System.Drawing.Point(41, 202);
+            this.txt_contactno.Location = new System.Drawing.Point(31, 221);
             this.txt_contactno.Name = "txt_contactno";
             this.txt_contactno.Size = new System.Drawing.Size(590, 15);
             this.txt_contactno.TabIndex = 5;
@@ -170,7 +190,7 @@
             // lbl_address
             // 
             this.lbl_address.AutoSize = true;
-            this.lbl_address.Location = new System.Drawing.Point(38, 152);
+            this.lbl_address.Location = new System.Drawing.Point(28, 171);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.Size = new System.Drawing.Size(51, 13);
             this.lbl_address.TabIndex = 9;
@@ -179,7 +199,7 @@
             // txt_address
             // 
             this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_address.Location = new System.Drawing.Point(41, 168);
+            this.txt_address.Location = new System.Drawing.Point(31, 187);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(590, 15);
             this.txt_address.TabIndex = 4;
@@ -187,7 +207,7 @@
             // lbl_officeorg
             // 
             this.lbl_officeorg.AutoSize = true;
-            this.lbl_officeorg.Location = new System.Drawing.Point(38, 118);
+            this.lbl_officeorg.Location = new System.Drawing.Point(28, 137);
             this.lbl_officeorg.Name = "lbl_officeorg";
             this.lbl_officeorg.Size = new System.Drawing.Size(113, 13);
             this.lbl_officeorg.TabIndex = 7;
@@ -196,7 +216,7 @@
             // txt_officeorg
             // 
             this.txt_officeorg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_officeorg.Location = new System.Drawing.Point(41, 134);
+            this.txt_officeorg.Location = new System.Drawing.Point(31, 153);
             this.txt_officeorg.Name = "txt_officeorg";
             this.txt_officeorg.Size = new System.Drawing.Size(590, 15);
             this.txt_officeorg.TabIndex = 3;
@@ -204,7 +224,7 @@
             // lbl_fname
             // 
             this.lbl_fname.AutoSize = true;
-            this.lbl_fname.Location = new System.Drawing.Point(38, 84);
+            this.lbl_fname.Location = new System.Drawing.Point(28, 103);
             this.lbl_fname.Name = "lbl_fname";
             this.lbl_fname.Size = new System.Drawing.Size(63, 13);
             this.lbl_fname.TabIndex = 5;
@@ -213,7 +233,7 @@
             // txt_fname
             // 
             this.txt_fname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_fname.Location = new System.Drawing.Point(41, 100);
+            this.txt_fname.Location = new System.Drawing.Point(31, 119);
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(590, 15);
             this.txt_fname.TabIndex = 2;
@@ -221,7 +241,7 @@
             // lbl_lname
             // 
             this.lbl_lname.AutoSize = true;
-            this.lbl_lname.Location = new System.Drawing.Point(38, 50);
+            this.lbl_lname.Location = new System.Drawing.Point(28, 69);
             this.lbl_lname.Name = "lbl_lname";
             this.lbl_lname.Size = new System.Drawing.Size(61, 13);
             this.lbl_lname.TabIndex = 3;
@@ -230,7 +250,7 @@
             // txt_lname
             // 
             this.txt_lname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_lname.Location = new System.Drawing.Point(41, 66);
+            this.txt_lname.Location = new System.Drawing.Point(31, 85);
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(590, 15);
             this.txt_lname.TabIndex = 1;
@@ -993,5 +1013,7 @@
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Label lbl_character10k;
         private System.Windows.Forms.Label lbl_characters5k;
+        private System.Windows.Forms.DateTimePicker picker_recorded;
+        private System.Windows.Forms.Label label1;
     }
 }

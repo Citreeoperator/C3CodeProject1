@@ -34,6 +34,9 @@ namespace C3CodeProject1
         {
             picker_dateofincident.Format = DateTimePickerFormat.Custom;
             picker_dateofincident.CustomFormat = "MMMM dd yyyy";
+
+            picker_recorded.Format = DateTimePickerFormat.Custom;
+            picker_recorded.CustomFormat = "MMMM dd yyyy";
         }
 
         public void typeofrequestcondition()
@@ -99,6 +102,7 @@ namespace C3CodeProject1
         private void btn_submit_Click(object sender, EventArgs e)
         {
             DateTime dt = picker_dateofincident.Value;
+            DateTime gt = picker_recorded.Value;
             typeofrequestcondition();
             outcomerequestcondition();
             statusrequestcondition();
@@ -156,7 +160,7 @@ namespace C3CodeProject1
             {
                 //enter data to database
                 MySqlConnection myConn = new MySqlConnection(connectionclass.myConnection);
-                string strquery = "INSERT INTO db_c3blackops.c3_request_form (recordeddate, lname, fname, officeorg, address_r, contactno, emailadd, dateofincident, timeofincident, typeofincident, locationofincident, barangay, camera, accompaniedby, typeofrequest, outcomeofreq, additionalinfo, remarks, releasedby, status) VALUES ('" + DateTime.Now.ToString("MMMM dd yyyy") + "', '" + txt_lname.Text + "', '" + txt_fname.Text + "', '" + txt_officeorg.Text + "', '" + txt_address.Text + "', '" + txt_contactno.Text + "', '" + txt_email.Text + "', '" + dt.ToString("MMMM dd yyyy") + "', '" + txt_timeofincident.Text + "', '" + drop_typeofincident.Text + "', '" + txt_location.Text + "', '" + drop_brgy.Text + "', '" + drop_camera.Text + "', '" + txt_accompanied.Text + "', '" + typeofrequest + "', '" + outcomerequest + "', '" + txt_additional.Text + "', '" + txt_remarks.Text + "', '" + drop_released.Text + "', '" + statusrequest + "')";
+                string strquery = "INSERT INTO db_c3blackops.c3_request_form (recordeddate, lname, fname, officeorg, address_r, contactno, emailadd, dateofincident, timeofincident, typeofincident, locationofincident, barangay, camera, accompaniedby, typeofrequest, outcomeofreq, additionalinfo, remarks, releasedby, status) VALUES ('" + gt.ToString("MMMM dd yyyy") + "', '" + txt_lname.Text + "', '" + txt_fname.Text + "', '" + txt_officeorg.Text + "', '" + txt_address.Text + "', '" + txt_contactno.Text + "', '" + txt_email.Text + "', '" + dt.ToString("MMMM dd yyyy") + "', '" + txt_timeofincident.Text + "', '" + drop_typeofincident.Text + "', '" + txt_location.Text + "', '" + drop_brgy.Text + "', '" + drop_camera.Text + "', '" + txt_accompanied.Text + "', '" + typeofrequest + "', '" + outcomerequest + "', '" + txt_additional.Text + "', '" + txt_remarks.Text + "', '" + drop_released.Text + "', '" + statusrequest + "')";
                 MySqlCommand cmd = new MySqlCommand(strquery, myConn);
                 MySqlDataReader myReader;
                 try
@@ -178,6 +182,7 @@ namespace C3CodeProject1
                     txt_additional.Clear();
                     txt_remarks.Clear();
                     picker_dateofincident.Value = DateTime.Now;
+                    picker_recorded.Value = DateTime.Now;
                     drop_typeofincident.SelectedIndex = -1;
                     drop_brgy.SelectedIndex = -1;
                     drop_camera.SelectedIndex = -1;
@@ -305,6 +310,7 @@ namespace C3CodeProject1
                 while (myReader.Read())
                 {
                     conditionalbranches();
+                    picker_recorded.Text = myReader.GetString("recordeddate");
                     txt_lname.Text = myReader.GetString("lname");
                     txt_fname.Text = myReader.GetString("fname");
                     txt_officeorg.Text = myReader.GetString("officeorg");
@@ -343,6 +349,7 @@ namespace C3CodeProject1
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            SearchData(txt_searchbox.Text);
             if (txt_searchbox.Text == "")
             {
                 MessageBox.Show("Please enter a case number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -444,6 +451,7 @@ namespace C3CodeProject1
         private void btn_edit_Click(object sender, EventArgs e)
         {
             DateTime dt = picker_dateofincident.Value;
+            DateTime gt = picker_recorded.Value;
             typeofrequestcondition();
             outcomerequestcondition();
             statusrequestcondition();
@@ -455,7 +463,7 @@ namespace C3CodeProject1
 
                 using (MySqlCommand cmd = new MySqlCommand("UPDATE db_c3blackops.c3_request_form SET recordeddate = @recordeddate, lname = @lname, fname = @fname, officeorg = @officeorg, address_r = @address_r, contactno = @contactno, emailadd = @emailadd, dateofincident = @dateofincident, timeofincident = @timeofincident, typeofincident = @typeofincident, locationofincident = @locationofincident, barangay = @barangay, camera = @camera, accompaniedby = @accompaniedby, typeofrequest = @typeofrequest, outcomeofreq = @outcomeofreq, additionalinfo = @additionalinfo, remarks = @remarks, releasedby = @releasedby, status = @status WHERE caseno = @caseno", myConn))
                 {
-                    cmd.Parameters.AddWithValue("@recordeddate", DateTime.Now.ToString("MMMM dd yyyy"));
+                    cmd.Parameters.AddWithValue("@recordeddate", gt.ToString("MMMM dd yyyy"));
                     cmd.Parameters.AddWithValue("@lname", txt_lname.Text);
                     cmd.Parameters.AddWithValue("@fname", txt_fname.Text);
                     cmd.Parameters.AddWithValue("@officeorg", txt_officeorg.Text);
@@ -492,6 +500,7 @@ namespace C3CodeProject1
                     txt_additional.Clear();
                     txt_remarks.Clear();
                     picker_dateofincident.Value = DateTime.Now;
+                    picker_recorded.Value = DateTime.Now;
                     drop_typeofincident.SelectedIndex = -1;
                     drop_brgy.SelectedIndex = -1;
                     drop_camera.SelectedIndex = -1;
@@ -533,6 +542,7 @@ namespace C3CodeProject1
                 txt_additional.Clear();
                 txt_remarks.Clear();
                 picker_dateofincident.Value = DateTime.Now;
+                picker_recorded.Value = DateTime.Now;
                 drop_typeofincident.SelectedIndex = -1;
                 drop_brgy.SelectedIndex = -1;
                 drop_camera.SelectedIndex = -1;

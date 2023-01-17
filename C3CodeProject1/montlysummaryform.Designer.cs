@@ -105,7 +105,7 @@
             this.show_today.AutoSize = true;
             this.show_today.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_today.ForeColor = System.Drawing.SystemColors.Control;
-            this.show_today.Location = new System.Drawing.Point(181, 133);
+            this.show_today.Location = new System.Drawing.Point(177, 133);
             this.show_today.Name = "show_today";
             this.show_today.Size = new System.Drawing.Size(42, 50);
             this.show_today.TabIndex = 1;
@@ -148,7 +148,7 @@
             this.show_month.AutoSize = true;
             this.show_month.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_month.ForeColor = System.Drawing.SystemColors.Control;
-            this.show_month.Location = new System.Drawing.Point(181, 133);
+            this.show_month.Location = new System.Drawing.Point(177, 133);
             this.show_month.Name = "show_month";
             this.show_month.Size = new System.Drawing.Size(42, 50);
             this.show_month.TabIndex = 1;
@@ -191,7 +191,7 @@
             this.show_released.AutoSize = true;
             this.show_released.Font = new System.Drawing.Font("Segoe UI", 27.75F);
             this.show_released.ForeColor = System.Drawing.SystemColors.Control;
-            this.show_released.Location = new System.Drawing.Point(181, 133);
+            this.show_released.Location = new System.Drawing.Point(178, 133);
             this.show_released.Name = "show_released";
             this.show_released.Size = new System.Drawing.Size(42, 50);
             this.show_released.TabIndex = 1;
@@ -275,7 +275,7 @@
             // 
             this.show_freq.Font = new System.Drawing.Font("Segoe UI", 27.75F);
             this.show_freq.ForeColor = System.Drawing.SystemColors.Control;
-            this.show_freq.Location = new System.Drawing.Point(3, 98);
+            this.show_freq.Location = new System.Drawing.Point(3, 83);
             this.show_freq.Name = "show_freq";
             this.show_freq.Size = new System.Drawing.Size(405, 150);
             this.show_freq.TabIndex = 1;
@@ -317,7 +317,7 @@
             // 
             this.show_common.Font = new System.Drawing.Font("Segoe UI", 27.75F);
             this.show_common.ForeColor = System.Drawing.SystemColors.Control;
-            this.show_common.Location = new System.Drawing.Point(0, 98);
+            this.show_common.Location = new System.Drawing.Point(0, 83);
             this.show_common.Name = "show_common";
             this.show_common.Size = new System.Drawing.Size(411, 150);
             this.show_common.TabIndex = 1;
