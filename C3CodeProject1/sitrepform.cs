@@ -42,25 +42,58 @@ namespace C3CodeProject1
 
         private void conditionchecks()
         {
+            //if checkboxes
             if (check_mdrrmomedic.Checked && check_mdrrmovolunteer.Checked && check_bfp.Checked && check_pnp.Checked == true)
             {
-                responders = "MDDRMO Medic, MDDRMO Volunteer, BFP, PNP";
+                responders = "MDRRMO MEDICS, MDRRMO VOLUNTEERS, BFP, PNP";
             }
             else if (check_mdrrmomedic.Checked && check_mdrrmovolunteer.Checked && check_bfp.Checked == true)
             {
-                responders = "MDDRMO Medic, MDDRMO Volunteer, BFP";
+                responders = "MDRRMO MEDICS, MDRRMO VOLUNTEERS, BFP";
+            }
+            else if (check_mdrrmomedic.Checked && check_mdrrmovolunteer.Checked && check_pnp.Checked == true)
+            {
+                responders = "MDRRMO MEDICS, MDRRMO VOLUNTEERS, PNP";
+            }
+            else if (check_mdrrmomedic.Checked && check_bfp.Checked && check_pnp.Checked == true)
+            {
+                responders = "MDRRMO MEDICS, BFP, PNP";
+            }
+            else if (check_mdrrmovolunteer.Checked && check_bfp.Checked && check_pnp.Checked == true)
+            {
+                responders = "MDRRMO VOLUNTEERS, BFP, PNP";
             }
             else if (check_mdrrmomedic.Checked && check_mdrrmovolunteer.Checked == true)
             {
-                responders = "MDDRMO Medic, MDDRMO Volunteer";
+                responders = "MDRRMO MEDICS, MDRRMO VOLUNTEERS";
+            }
+            else if (check_mdrrmomedic.Checked && check_bfp.Checked == true)
+            {
+                responders = "MDRRMO MEDICS, BFP";
+            }
+            else if (check_mdrrmomedic.Checked && check_pnp.Checked == true)
+            {
+                responders = "MDRRMO MEDICS, PNP";
+            }
+            else if (check_mdrrmovolunteer.Checked && check_bfp.Checked == true)
+            {
+                responders = "MDRRMO VOLUNTEERS, BFP";
+            }
+            else if (check_mdrrmovolunteer.Checked && check_pnp.Checked == true)
+            {
+                responders = "MDRRMO VOLUNTEERS, PNP";
+            }
+            else if (check_bfp.Checked && check_pnp.Checked == true)
+            {
+                responders = "BFP, PNP";
             }
             else if (check_mdrrmomedic.Checked == true)
             {
-                responders = "MDDRMO Medic";
+                responders = "MDRRMO MEDICS";
             }
             else if (check_mdrrmovolunteer.Checked == true)
             {
-                responders = "MDDRMO Volunteer";
+                responders = "MDRRMO VOLUNTEERS";
             }
             else if (check_bfp.Checked == true)
             {
@@ -70,42 +103,11 @@ namespace C3CodeProject1
             {
                 responders = "PNP";
             }
-            else if (check_mdrrmomedic.Checked && check_bfp.Checked && check_pnp.Checked == true)
-            {
-                responders = "MDDRMO Medic, BFP, PNP";
-            }
-            else if (check_mdrrmovolunteer.Checked && check_bfp.Checked && check_pnp.Checked == true)
-            {
-                responders = "MDDRMO Volunteer, BFP, PNP";
-            }
-            else if (check_mdrrmomedic.Checked && check_mdrrmovolunteer.Checked && check_pnp.Checked == true)
-            {
-                responders = "MDDRMO Medic, MDDRMO Volunteer, PNP";
-            }
-            else if (check_mdrrmomedic.Checked && check_bfp.Checked == true)
-            {
-                responders = "MDDRMO Medic, BFP";
-            }
-            else if (check_mdrrmovolunteer.Checked && check_bfp.Checked == true)
-            {
-                responders = "MDDRMO Volunteer, BFP";
-            }
-            else if (check_mdrrmomedic.Checked && check_pnp.Checked == true)
-            {
-                responders = "MDDRMO Medic, PNP";
-            }
-            else if (check_mdrrmovolunteer.Checked && check_pnp.Checked == true)
-            {
-                responders = "MDDRMO Volunteer, PNP";
-            }
-            else if (check_bfp.Checked && check_pnp.Checked == true)
-            {
-                responders = "BFP, PNP";
-            }
             else
             {
                 responders = "";
             }
+
         }
 
         private void radio_yes_CheckedChanged(object sender, EventArgs e)
@@ -147,7 +149,7 @@ namespace C3CodeProject1
             }
             else if (txt_cause.Text == "")
             {
-                MessageBox.Show("Please enter the cause of illness", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter the cause of injury", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_cause.Focus();
             }
             else if (txt_vehicle.Text == "")
@@ -172,7 +174,7 @@ namespace C3CodeProject1
             }
             else
             {
-                previewbox_generate.Text = previewbox_generate.Text + "\n\n" + "II. INCIDENT:" + "\nWHAT: " + txt_what.Text + "\n" + "WHEN: " + txt_when.Text + "\n" + "WHERE: " + txt_where.Text + "\n" + "NATURE OF ILLNESS: " + txt_natureofillness.Text + "\n" + "CAUSE OF ILLNESS: " + txt_cause.Text + "\n" + "VEHICLE/S INVOLVED: " + txt_vehicle.Text + "\n" + "NUMBER OF INJURED: " + txt_numofinjured.Text + "\n" + "RESPONDERS: " + responders + "\n" + "ACTIONS TAKEN: " + txt_actions.Text;
+                previewbox_generate.Text = previewbox_generate.Text + "\n\n" + "II. INCIDENT:" + "\nWHAT: " + txt_what.Text + "\n" + "WHEN: " + txt_when.Text + "\n" + "WHERE: " + txt_where.Text + "\n" + "NATURE OF ILLNESS: " + txt_natureofillness.Text + "\n" + "CAUSE OF INJURY: " + txt_cause.Text + "\n" + "VEHICLE/S INVOLVED: " + txt_vehicle.Text + "\n" + "NUMBER OF INJURED: " + txt_numofinjured.Text + "\n" + "RESPONDERS: " + responders + "\n" + "ACTIONS TAKEN: " + txt_actions.Text;
                 txt_what.Text = "";
                 txt_when.Text = "";
                 txt_where.Text = "";
@@ -190,7 +192,7 @@ namespace C3CodeProject1
 
         private void btn_addno_Click(object sender, EventArgs e)
         {
-            previewbox_generate.Text = previewbox_generate.Text + "\n\n" + "II. INCIDENT:" + "\nWHAT: NONE \nWHEN: NONE \nWHERE: NONE \nNATURE OF ILLNESS: NONE \nCAUSE OF ILLNESS: NONE \nVEHICLE/S INVOLVED: NONE \nNUMBER OF INJURED: NONE \nRESPONDERS: NONE \nACTIONS TAKEN: NONE";
+            previewbox_generate.Text = previewbox_generate.Text + "\n\n" + "II. INCIDENT:" + "\nWHAT: NONE \nWHEN: NONE \nWHERE: NONE \nNATURE OF ILLNESS: NONE \nCAUSE OF INJURY: NONE \nVEHICLE/S INVOLVED: NONE \nNUMBER OF INJURED: NONE \nRESPONDERS: NONE \nACTIONS TAKEN: NONE";
         }
 
         private void check_power_CheckedChanged(object sender, EventArgs e)
